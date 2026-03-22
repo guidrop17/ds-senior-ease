@@ -1,0 +1,81 @@
+name: UI CI/CD
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    tags:
+      - 'ui-v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ui-ci-cd-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Build UI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build UI library
+        run: npm run build:ui
+
+  publish-npm:
+    name: Publish UI to npm
+    needs: ci
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/ui-v')
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node for npm publish
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Validate tag version matches package version
+        shell: bash
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#ui-v}"
+          PACKAGE_VERSION="$(node -p "require('./projects/ui/package.json').version")"
+          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) does not match projects/ui/package.json ($PACKAGE_VERSION)."
+            exit 1
+          fi
+
+      - name: Build UI library
+        run: npm run build:ui
+
+      - name: Publish package
+        run: npm publish ./dist/ui --access public --provenance
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

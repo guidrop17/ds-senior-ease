@@ -222,7 +222,34 @@ Do `package.json` raiz:
 Importe componentes via pacote `ui`:
 
 ```ts
-import { ButtonComponent, SidebarComponent } from 'ui';
+import { ButtonComponent, SidebarComponent } from '@senior-ease/ui';
 ```
 
 Evite importar por caminhos internos da pasta `lib`.
+
+## CI/CD (GitHub Actions -> npm)
+
+Workflow: `.github/workflows/ui-ci-cd.yml`
+
+- CI roda em `pull_request` e `push` na branch `main`
+- Publish roda automaticamente quando uma tag `ui-v*` e enviada
+- Exemplo de tag valida: `ui-v0.1.0`
+
+### Secret necessario
+
+No repositorio GitHub, configure:
+
+- `NPM_TOKEN`: token de automacao do npm com permissao de publish
+
+### Fluxo de release
+
+1. Atualize a versao em `projects/ui/package.json`
+2. Commit e push para `main`
+3. Crie e envie a tag da mesma versao:
+
+```bash
+git tag ui-v0.1.0
+git push origin ui-v0.1.0
+```
+
+O workflow valida que a tag e a versao do `projects/ui/package.json` sao iguais antes de publicar.

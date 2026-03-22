@@ -1,59 +1,228 @@
-# DsSeniorEase
+# DS Senior Ease
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+Design System em Angular (standalone) para o ecossistema Senior Ease, com foco em:
 
-## Development server
+- Arquitetura Atomic Design
+- Acessibilidade (a11y)
+- Responsividade (incluindo navegacao mobile com menu inferior)
+- Biblioteca reutilizavel (`ui`) + app de validacao (`playground`) + Storybook
 
-To start a local development server, run:
+## Visao Geral
 
-```bash
-ng serve
+Este workspace contem dois projetos principais:
+
+- `ui`: biblioteca de componentes standalone, organizada por Atomic Design
+- `playground`: aplicacao de demonstracao para testar os componentes em cenarios reais
+
+O `ui` tambem possui Storybook para documentacao visual e validacao isolada dos componentes.
+
+## Stack
+
+- Angular `21.x`
+- Storybook `10.x` (`@storybook/angular`)
+- SCSS com tokens e tema global
+- Font Awesome (`@fortawesome/*`) para icones no DS
+
+## Estrutura do Projeto
+
+```text
+projects/
+  ui/
+    .storybook/
+    src/
+      lib/
+        atoms/
+        molecules/
+        organisms/
+        templates/
+      stories/
+        atoms/
+        molecules/
+        organisms/
+        templates/
+      styles/
+        tokens/
+        theme.scss
+      public-api.ts
+  playground/
+    src/
+      app/
+      styles.scss
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Arquitetura Atomic Design (UI)
 
-## Code scaffolding
+Componentes em `projects/ui/src/lib`:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Atoms:
+- `ui-button`
+- `ui-icon`
+- `ui-avatar`
+- `ui-badge`
+- `ui-text`
+- `ui-divider`
+
+Molecules:
+- `ui-nav-item`
+- `ui-stat`
+- `ui-list-item`
+- `ui-user-info`
+
+Organisms:
+- `ui-sidebar`
+- `ui-header`
+- `ui-hero-card`
+- `ui-stats-grid`
+- `ui-agenda-list`
+- `ui-materials-list`
+
+Templates:
+- `ui-dashboard-layout`
+
+Padrao por componente:
+
+- `component.ts`
+- `component.html`
+- `component.scss`
+- `index.ts`
+
+## Tokens e Tema
+
+Tokens em `projects/ui/src/styles/tokens`, agregados no `theme.scss`:
+
+- `colors.tokens.scss`
+- `spacing.tokens.scss`
+- `typography.tokens.scss`
+- `radius.tokens.scss`
+- `shadow.tokens.scss`
+
+Diretrizes:
+
+- valores de cor, espacamento, tipografia, raio e sombra via CSS variables
+- sem hardcode visual nos componentes
+- tema aplicado globalmente no Playground e no Storybook
+
+## Exportacoes da Biblioteca
+
+Arquivo publico: `projects/ui/src/public-api.ts`
+
+Exporta apenas barrels:
+
+- `./lib/atoms`
+- `./lib/molecules`
+- `./lib/organisms`
+- `./lib/templates`
+
+Sem deep imports no consumo externo.
+
+## Playground
+
+O Playground demonstra o DS completo em uma unica tela (`app.component`), incluindo:
+
+- uso de template (`ui-dashboard-layout`)
+- navegacao lateral/rodape responsiva (`ui-sidebar`)
+- catalogo de atoms, molecules e organisms
+
+Estilo global:
+
+- `projects/playground/src/styles.scss` importa `@use 'styles/theme';`
+
+Config importante no `angular.json`:
+
+- `stylePreprocessorOptions.includePaths` inclui `projects/ui/src`
+
+## Storybook
+
+Config em `projects/ui/.storybook`.
+
+- stories organizadas por Atomic em `projects/ui/src/stories/*`
+- addon ativo: `@storybook/addon-a11y`
+- addon ativo: `@storybook/addon-docs`
+- alias `ui` resolvido no tsconfig: `"ui": ["../src/public-api.ts"]`
+
+## Acessibilidade e Responsividade
+
+Este DS foi preparado para o contexto do Senior Ease (PWA com foco em acessibilidade):
+
+- componentes com suporte a atributos ARIA relevantes
+- contraste e foco visivel
+- tipografia e temas auxiliares para legibilidade
+- layout responsivo
+- no mobile, o menu principal (`ui-sidebar`) migra para a regiao inferior da tela
+
+## Como Rodar
+
+Instalar dependencias:
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Rodar playground:
 
 ```bash
-ng generate --help
+npm run serve:playground
 ```
 
-## Building
-
-To build the project run:
+ou
 
 ```bash
-ng build
+npx ng serve playground
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Abrir: `http://localhost:4200`
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Rodar Storybook:
 
 ```bash
-ng test
+npm run storybook
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+ou
 
 ```bash
-ng e2e
+npx ng run ui:storybook
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Abrir: `http://localhost:6006`
 
-## Additional Resources
+Build da biblioteca `ui`:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run build:ui
+```
+
+Build do playground:
+
+```bash
+npm run build:playground
+```
+
+Build estatico do Storybook:
+
+```bash
+npx ng run ui:build-storybook
+```
+
+## Scripts Disponiveis
+
+Do `package.json` raiz:
+
+- `npm run start`
+- `npm run build`
+- `npm run watch`
+- `npm run test`
+- `npm run storybook`
+- `npm run build:ui`
+- `npm run build:playground`
+- `npm run serve:playground`
+
+## Consumo da UI
+
+Importe componentes via pacote `ui`:
+
+```ts
+import { ButtonComponent, SidebarComponent } from 'ui';
+```
+
+Evite importar por caminhos internos da pasta `lib`.

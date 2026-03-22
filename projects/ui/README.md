@@ -1,64 +1,60 @@
-# Ui
+# @senior-ease/ui
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Angular UI library do Design System Senior Ease.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Instalacao
 
 ```bash
-ng generate component component-name
+npm install @senior-ease/ui
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Peer dependencies esperadas no app consumidor:
+
+- `@angular/common`
+- `@angular/core`
+- `@fortawesome/angular-fontawesome`
+- `@fortawesome/fontawesome-svg-core`
+- `@fortawesome/free-solid-svg-icons`
+
+## Uso Basico
+
+```ts
+import { ButtonComponent } from '@senior-ease/ui';
+```
+
+## Build da Biblioteca
+
+No workspace raiz:
 
 ```bash
-ng generate --help
+npm run build:ui
 ```
 
-## Building
+Saida: `dist/ui`
 
-To build the library, run:
+## Publicacao no NPM
+
+No workspace raiz:
 
 ```bash
-ng build ui
+npm run publish:ui
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+Esse script faz:
 
-### Publishing the Library
+1. build da lib
+2. `npm publish ./dist/ui --access public`
 
-Once the project is built, you can publish your library by following these steps:
+## Versao (release)
 
-1. Navigate to the `dist` directory:
-
-   ```bash
-   cd dist/ui
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Antes de publicar nova versao:
 
 ```bash
-ng test
+npm version patch --prefix projects/ui
 ```
 
-## Running end-to-end tests
+Opcoes:
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `patch` para correcao (`0.1.0 -> 0.1.1`)
+- `minor` para nova feature (`0.1.0 -> 0.2.0`)
+- `major` para breaking change (`0.1.0 -> 1.0.0`)

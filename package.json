@@ -14,7 +14,7 @@
     "build:playground": "ng build playground",
     "serve:playground": "ng serve playground"
   },
-  "private": true,
+  "private": false,
   "packageManager": "npm@10.9.4",
   "dependencies": {
     "@angular/common": "^21.2.5",

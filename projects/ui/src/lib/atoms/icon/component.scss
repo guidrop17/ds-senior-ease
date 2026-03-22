@@ -1,0 +1,14 @@
+:host {
+  display: inline-flex;
+}
+
+.ui-icon {
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  font-size: var(--ui-font-size-400);
+  font-weight: var(--ui-font-weight-semibold);
+  justify-content: center;
+  line-height: 1;
+  min-width: var(--ui-space-5);
+}

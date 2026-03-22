@@ -1,0 +1,106 @@
+@use './tokens/colors.tokens.scss';
+@use './tokens/radius.tokens.scss';
+@use './tokens/shadow.tokens.scss';
+@use './tokens/spacing.tokens.scss';
+@use './tokens/typography.tokens.scss';
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--ui-color-page);
+  color: var(--ui-color-text);
+  font-family: var(--ui-font-family-base);
+  font-size: var(--ui-font-size-300);
+  line-height: var(--ui-line-height-base);
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ui-theme-high-contrast {
+  --ui-color-page: #000000;
+  --ui-color-surface: #111111;
+  --ui-color-surface-muted: #1c1c1c;
+  --ui-color-border: #3a3a3a;
+  --ui-color-text: #f5f5f5;
+  --ui-color-text-muted: #d1d1d1;
+  --ui-color-text-inverse: #000000;
+  --ui-color-primary: #000000;
+  --ui-color-primary-strong: #000000;
+  --ui-color-primary-soft: #fff59d;
+  --ui-color-accent: #ffd54f;
+  --ui-color-accent-soft: #fff8dc;
+  --ui-color-success: #7ef29a;
+  --ui-color-success-soft: #0b2814;
+  --ui-color-warning: #ffd54f;
+  --ui-color-warning-soft: #2b2406;
+  --ui-color-danger: #ff7f7f;
+  --ui-color-danger-soft: #2e1111;
+  --ui-color-focus-ring: #ffff00;
+}
+
+.ui-theme-soft {
+  --ui-color-page: #f8f4f0;
+  --ui-color-surface: #ffffff;
+  --ui-color-surface-muted: #f2ede7;
+  --ui-color-border: #d8cfc6;
+  --ui-color-text: #1f2a35;
+  --ui-color-text-muted: #5a6674;
+  --ui-color-primary: #3a6b99;
+  --ui-color-primary-strong: #2a4e73;
+  --ui-color-primary-soft: #dce8f4;
+  --ui-color-accent: #8b5a2b;
+  --ui-color-accent-soft: #f6eee4;
+}
+
+.ui-font-small {
+  font-size: 0.875rem;
+}
+
+.ui-font-large {
+  font-size: 1.125rem;
+}
+
+.ui-font-x-large {
+  font-size: 1.25rem;
+}
+
+.ui-font-xx-large {
+  font-size: 1.5rem;
+}
+
+.ui-dyslexia-font,
+.ui-dyslexia-font body,
+.ui-dyslexia-font input,
+.ui-dyslexia-font textarea,
+.ui-dyslexia-font button,
+.ui-dyslexia-font select {
+  font-family: 'Atkinson Hyperlegible', 'Inter', sans-serif !important;
+  letter-spacing: 0.03em;
+  word-spacing: 0.08em;
+}
+
+.ui-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

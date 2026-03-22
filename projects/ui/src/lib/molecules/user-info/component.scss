@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.ui-user-info {
+  align-items: center;
+  display: grid;
+  gap: var(--ui-space-3);
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.ui-user-info__copy {
+  display: grid;
+  gap: var(--ui-space-1);
+}

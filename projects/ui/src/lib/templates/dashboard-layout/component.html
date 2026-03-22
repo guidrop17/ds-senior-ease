@@ -1,0 +1,17 @@
+<a class="ui-dashboard-layout__skip" href="#ui-main-content">Pular para conteudo principal</a>
+
+<div class="ui-dashboard-layout">
+  <aside class="ui-dashboard-layout__sidebar">
+    <ng-content select="[sidebar]"></ng-content>
+  </aside>
+
+  <div class="ui-dashboard-layout__main">
+    <div class="ui-dashboard-layout__header">
+      <ng-content select="[header]"></ng-content>
+    </div>
+
+    <main class="ui-dashboard-layout__content" id="ui-main-content" tabindex="-1">
+      <ng-content></ng-content>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<header class="ui-header">
+  <div class="ui-header__copy">
+    @if (badgeLabel) {
+      <ui-badge [label]="badgeLabel" variant="primary"></ui-badge>
+    }
+
+    <ui-text element="h1" size="xl" weight="semibold">{{ title }}</ui-text>
+
+    @if (subtitle) {
+      <ui-text element="p" tone="muted">{{ subtitle }}</ui-text>
+    }
+  </div>
+
+  @if (actionLabel) {
+    <ui-button [label]="actionLabel" [ariaLabel]="actionLabel" variant="secondary"></ui-button>
+  }
+</header>

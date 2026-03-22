@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.ui-hero-card {
+  align-items: stretch;
+  background: linear-gradient(135deg, var(--ui-color-surface), var(--ui-color-primary-soft));
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-md);
+  display: grid;
+  gap: var(--ui-space-5);
+  grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 0.8fr);
+  padding: var(--ui-space-7);
+}
+
+.ui-hero-card__copy,
+.ui-hero-card__highlight {
+  display: grid;
+  gap: var(--ui-space-3);
+}
+
+.ui-hero-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ui-space-3);
+}
+
+.ui-hero-card__highlight {
+  align-content: start;
+  background: var(--ui-color-text-inverse);
+  border-radius: var(--ui-radius-md);
+  padding: var(--ui-space-5);
+}
+
+@media (max-width: 64rem) {
+  .ui-hero-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

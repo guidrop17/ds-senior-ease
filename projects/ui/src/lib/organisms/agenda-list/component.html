@@ -1,0 +1,20 @@
+<section class="ui-panel">
+  <ui-text element="h3" size="lg" weight="semibold">{{ title }}</ui-text>
+
+  <div class="ui-panel__list">
+    @for (item of items; track item.title; let last = $last) {
+      <ui-list-item
+        [title]="item.title"
+        [description]="item.description ?? ''"
+        [meta]="item.meta ?? ''"
+        [badgeLabel]="item.badgeLabel ?? ''"
+        [badgeVariant]="item.badgeVariant ?? 'neutral'"
+        [icon]="item.icon ?? 'calendar'"
+      ></ui-list-item>
+
+      @if (!last) {
+        <ui-divider></ui-divider>
+      }
+    }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<article class="ui-list-item" [attr.aria-label]="ariaLabel || null">
+  <span class="ui-list-item__icon">
+    <ui-icon [name]="icon" aria-hidden="true"></ui-icon>
+  </span>
+
+  <div class="ui-list-item__copy">
+    <ui-text element="span" weight="semibold">{{ title }}</ui-text>
+    @if (description) {
+      <ui-text element="span" size="sm" tone="muted">{{ description }}</ui-text>
+    }
+  </div>
+
+  <div class="ui-list-item__meta">
+    @if (meta) {
+      <ui-text element="span" size="sm" tone="muted">{{ meta }}</ui-text>
+    }
+
+    @if (badgeLabel) {
+      <ui-badge [label]="badgeLabel" [variant]="badgeVariant"></ui-badge>
+    }
+  </div>
+</article>

@@ -1,0 +1,27 @@
+@switch (element) {
+  @case ('p') {
+    <p class="ui-text" [attr.data-tone]="tone" [attr.data-weight]="weight" [attr.data-size]="size">
+      <ng-content></ng-content>
+    </p>
+  }
+  @case ('h1') {
+    <h1 class="ui-text" [attr.data-tone]="tone" [attr.data-weight]="weight" [attr.data-size]="size">
+      <ng-content></ng-content>
+    </h1>
+  }
+  @case ('h2') {
+    <h2 class="ui-text" [attr.data-tone]="tone" [attr.data-weight]="weight" [attr.data-size]="size">
+      <ng-content></ng-content>
+    </h2>
+  }
+  @case ('h3') {
+    <h3 class="ui-text" [attr.data-tone]="tone" [attr.data-weight]="weight" [attr.data-size]="size">
+      <ng-content></ng-content>
+    </h3>
+  }
+  @default {
+    <span class="ui-text" [attr.data-tone]="tone" [attr.data-weight]="weight" [attr.data-size]="size">
+      <ng-content></ng-content>
+    </span>
+  }
+}

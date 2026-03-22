@@ -1,0 +1,211 @@
+<ui-dashboard-layout>
+  <ui-sidebar
+    sidebar
+    brand="Senior Ease"
+    subtitle="Atomic Design System"
+    userName="Maria Helena"
+    userRole="Paciente acompanhada"
+    userInitials="MH"
+    navAriaLabel="Navegacao principal do playground"
+    [items]="navItems"
+  ></ui-sidebar>
+
+  <ui-header
+    header
+    badgeLabel="Playground"
+    title="Catalogo do Design System"
+    subtitle="Vitrine completa dos atoms, molecules, organisms e template da biblioteca ui."
+    actionLabel="Nova visita"
+  ></ui-header>
+
+  <div class="playground-content">
+    <ui-hero-card
+      eyebrow="Atomic Design"
+      title="Um playground unico para validar, comparar e evoluir todos os componentes do DS."
+      description="O template, os organisms, os molecules e os atoms aparecem juntos nesta tela para acelerar manutencao e revisao visual."
+      primaryActionLabel="Explorar biblioteca"
+      secondaryActionLabel="Revisar Storybook"
+      highlightLabel="Estrutura ativa"
+      highlightValue="Atoms -> Templates"
+    ></ui-hero-card>
+
+    <section class="showcase-section">
+      <div class="section-heading">
+        <ui-badge label="Template ativo" variant="primary" ariaLabel="Categoria template ativo"></ui-badge>
+        <ui-text element="h2" size="lg" weight="semibold">Dashboard Layout em uso</ui-text>
+        <ui-text element="p" tone="muted">
+          O proprio playground esta sendo renderizado por ui-dashboard-layout, com
+          ui-sidebar e ui-header aplicados como slots do template.
+        </ui-text>
+      </div>
+    </section>
+
+    <section class="showcase-section">
+      <div class="section-heading">
+        <ui-badge label="Atoms" variant="primary" ariaLabel="Categoria atoms"></ui-badge>
+        <ui-text element="h2" size="lg" weight="semibold">Base visual do sistema</ui-text>
+        <ui-text element="p" tone="muted">
+          Aqui ficam os elementos menores e reutilizaveis: button, icon, avatar, badge, text e divider.
+        </ui-text>
+      </div>
+
+      <div class="surface-grid surface-grid--atoms">
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Button</ui-text>
+          <div class="inline-group">
+            <ui-button label="Primary" ariaLabel="Executar acao principal"></ui-button>
+            <ui-button
+              label="Secondary"
+              variant="secondary"
+              ariaLabel="Executar acao secundaria"
+            ></ui-button>
+            <ui-button label="Ghost" variant="ghost" ariaLabel="Executar acao discreta"></ui-button>
+            <ui-button label="Disabled" ariaLabel="Acao indisponivel" [disabled]="true"></ui-button>
+          </div>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Badge</ui-text>
+          <div class="inline-group">
+            @for (badge of badgeSamples; track badge.label) {
+              <ui-badge [label]="badge.label" [variant]="badge.variant"></ui-badge>
+            }
+          </div>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Avatar</ui-text>
+          <div class="avatar-group">
+            <ui-avatar initials="SE" size="sm" ariaLabel="Avatar de Senior Ease"></ui-avatar>
+            <ui-avatar initials="MH" size="md" ariaLabel="Avatar de Maria Helena"></ui-avatar>
+            <ui-avatar initials="CR" size="lg" tone="accent" ariaLabel="Avatar de Carlos Rocha"></ui-avatar>
+            <ui-avatar initials="DS" size="md" tone="neutral" ariaLabel="Avatar de Design System"></ui-avatar>
+          </div>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Icon</ui-text>
+          <div class="icon-grid">
+            @for (icon of iconNames; track icon) {
+              <div class="icon-tile">
+                <ui-icon [name]="icon" [decorative]="false" [ariaLabel]="'Icone ' + icon"></ui-icon>
+                <ui-text element="span" size="sm" tone="muted">{{ icon }}</ui-text>
+              </div>
+            }
+          </div>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Text</ui-text>
+          <div class="text-stack">
+            <ui-text element="h2" size="xl" weight="semibold">Heading XL</ui-text>
+            <ui-text element="p">Texto base para leitura continua dentro do Design System.</ui-text>
+            <ui-text element="span" size="sm" tone="muted">Legenda secundaria com tom muted.</ui-text>
+          </div>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Divider</ui-text>
+          <div class="divider-stack">
+            <ui-text element="span" size="sm" tone="muted">Separacao horizontal</ui-text>
+            <ui-divider ariaLabel="Separador horizontal de exemplo"></ui-divider>
+            <div class="divider-inline">
+              <ui-text element="span" size="sm">Inicio</ui-text>
+              <ui-divider orientation="vertical" ariaLabel="Separador vertical de exemplo"></ui-divider>
+              <ui-text element="span" size="sm">Fim</ui-text>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="showcase-section">
+      <div class="section-heading">
+        <ui-badge label="Molecules" variant="success" ariaLabel="Categoria molecules"></ui-badge>
+        <ui-text element="h2" size="lg" weight="semibold">Composicoes funcionais</ui-text>
+        <ui-text element="p" tone="muted">
+          Molecules unem atoms em blocos prontos para navegacao, informacao e listagens.
+        </ui-text>
+      </div>
+
+      <div class="surface-grid">
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Nav Item</ui-text>
+          <div class="molecule-stack">
+            <ui-nav-item
+              label="Visao geral"
+              icon="home"
+              description="Resumo do cuidado"
+              ariaLabel="Navegar para visao geral"
+              routerLink="/inicio"
+              [active]="true"
+            ></ui-nav-item>
+            <ui-nav-item
+              label="Agenda"
+              icon="calendar"
+              description="Consultas e visitas"
+              ariaLabel="Navegar para agenda"
+              routerLink="/agenda"
+            ></ui-nav-item>
+            <ui-nav-item
+              label="Mensagens"
+              icon="message"
+              description="Em breve"
+              ariaLabel="Mensagens indisponivel"
+              [disabled]="true"
+            ></ui-nav-item>
+          </div>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">User Info</ui-text>
+          <ui-user-info
+            name="Maria Helena"
+            role="Paciente acompanhada"
+            initials="MH"
+            ariaLabel="Informacoes de usuario de Maria Helena"
+          ></ui-user-info>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">List Item</ui-text>
+          <ui-list-item
+            [title]="featuredListItem.title"
+            [description]="featuredListItem.description ?? ''"
+            [meta]="featuredListItem.meta ?? ''"
+            [badgeLabel]="featuredListItem.badgeLabel ?? ''"
+            [badgeVariant]="featuredListItem.badgeVariant ?? 'neutral'"
+            [icon]="featuredListItem.icon ?? 'calendar'"
+            [ariaLabel]="featuredListItem.ariaLabel ?? ''"
+          ></ui-list-item>
+        </article>
+
+        <article class="surface">
+          <ui-text element="h3" weight="semibold">Stat</ui-text>
+          <ui-stat
+            [label]="featuredStat.label"
+            [value]="featuredStat.value"
+            [description]="featuredStat.description ?? ''"
+            [tone]="featuredStat.tone ?? 'primary'"
+          ></ui-stat>
+        </article>
+      </div>
+    </section>
+
+    <section class="showcase-section">
+      <div class="section-heading">
+        <ui-badge label="Organisms" variant="warning" ariaLabel="Categoria organisms"></ui-badge>
+        <ui-text element="h2" size="lg" weight="semibold">Blocos de interface prontos</ui-text>
+        <ui-text element="p" tone="muted">
+          ui-sidebar, ui-header e ui-hero-card ja aparecem acima. Abaixo ficam os organisms de dados e listas.
+        </ui-text>
+      </div>
+
+      <div class="organism-grid">
+        <ui-stats-grid [items]="stats"></ui-stats-grid>
+        <ui-agenda-list [items]="agendaItems"></ui-agenda-list>
+        <ui-materials-list [items]="materialItems"></ui-materials-list>
+      </div>
+    </section>
+  </div>
+</ui-dashboard-layout>

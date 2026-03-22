@@ -1,0 +1,42 @@
+@if (routerLink && !disabled) {
+  <a
+    class="ui-nav-item"
+    [routerLink]="routerLink"
+    routerLinkActive="ui-nav-item--active"
+    [class.ui-nav-item--active]="active"
+    [attr.aria-current]="active ? 'page' : null"
+    [attr.aria-label]="ariaLabel || null"
+  >
+    <span class="ui-nav-item__icon">
+      <ui-icon [name]="iconName" [icon]="iconDefinition" [decorative]="true"></ui-icon>
+    </span>
+
+    <span class="ui-nav-item__copy">
+      <ui-text element="span" weight="semibold">{{ label }}</ui-text>
+      @if (description) {
+        <ui-text element="span" size="sm" tone="muted">{{ description }}</ui-text>
+      }
+    </span>
+  </a>
+} @else {
+  <button
+    class="ui-nav-item"
+    type="button"
+    [disabled]="disabled"
+    [attr.aria-current]="active ? 'page' : null"
+    [attr.aria-label]="ariaLabel || null"
+    [class.ui-nav-item--active]="active"
+    [class.ui-nav-item--disabled]="disabled"
+  >
+    <span class="ui-nav-item__icon">
+      <ui-icon [name]="iconName" [icon]="iconDefinition" [decorative]="true"></ui-icon>
+    </span>
+
+    <span class="ui-nav-item__copy">
+      <ui-text element="span" weight="semibold">{{ label }}</ui-text>
+      @if (description) {
+        <ui-text element="span" size="sm" tone="muted">{{ description }}</ui-text>
+      }
+    </span>
+  </button>
+}

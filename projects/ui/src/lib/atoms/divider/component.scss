@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.ui-divider {
+  background: var(--ui-color-border);
+  display: block;
+  height: var(--ui-border-width);
+  width: 100%;
+}
+
+.ui-divider--vertical {
+  height: 100%;
+  min-height: var(--ui-space-6);
+  width: var(--ui-border-width);
+}

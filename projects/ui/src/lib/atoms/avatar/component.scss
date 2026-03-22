@@ -1,0 +1,39 @@
+:host {
+  display: inline-flex;
+}
+
+.ui-avatar {
+  --ui-avatar-size: calc(var(--ui-space-8) + var(--ui-space-1));
+  align-items: center;
+  background: var(--ui-color-primary-soft);
+  border: var(--ui-border-width) solid transparent;
+  border-radius: var(--ui-radius-round);
+  color: var(--ui-color-primary-strong);
+  display: inline-flex;
+  font-size: var(--ui-font-size-200);
+  font-weight: var(--ui-font-weight-semibold);
+  height: var(--ui-avatar-size);
+  justify-content: center;
+  min-width: var(--ui-avatar-size);
+  text-transform: uppercase;
+}
+
+.ui-avatar--sm {
+  --ui-avatar-size: var(--ui-space-8);
+}
+
+.ui-avatar--lg {
+  --ui-avatar-size: calc(var(--ui-space-9) + var(--ui-space-1));
+  font-size: var(--ui-font-size-300);
+}
+
+.ui-avatar--accent {
+  background: var(--ui-color-accent-soft);
+  color: var(--ui-color-accent);
+}
+
+.ui-avatar--neutral {
+  background: var(--ui-color-surface-muted);
+  border-color: var(--ui-color-border);
+  color: var(--ui-color-text);
+}

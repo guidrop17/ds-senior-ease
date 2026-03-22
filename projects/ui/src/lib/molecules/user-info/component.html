@@ -1,0 +1,10 @@
+<div class="ui-user-info" [attr.aria-label]="ariaLabel || null">
+  <ui-avatar [initials]="initials" [size]="size" tone="neutral" ariaLabel="Avatar do usuario"></ui-avatar>
+
+  <div class="ui-user-info__copy">
+    <ui-text element="span" weight="semibold">{{ name }}</ui-text>
+    @if (role) {
+      <ui-text element="span" size="sm" tone="muted">{{ role }}</ui-text>
+    }
+  </div>
+</div>

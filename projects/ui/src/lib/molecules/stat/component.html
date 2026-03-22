@@ -1,0 +1,7 @@
+<article class="ui-stat" [attr.data-tone]="tone">
+  <ui-text element="span" size="sm" tone="muted">{{ label }}</ui-text>
+  <ui-text element="h3" size="lg" weight="semibold">{{ value }}</ui-text>
+  @if (description) {
+    <ui-text element="p" size="sm" tone="muted">{{ description }}</ui-text>
+  }
+</article>

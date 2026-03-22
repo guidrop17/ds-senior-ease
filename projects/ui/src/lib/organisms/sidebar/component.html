@@ -1,0 +1,67 @@
+<aside class="ui-sidebar ui-sidebar__desktop">
+  <div class="ui-sidebar__brand">
+    <span class="ui-sidebar__mark">SE</span>
+    <div class="ui-sidebar__brand-copy">
+      <ui-text element="span" weight="semibold">{{ brand }}</ui-text>
+      <ui-text element="span" size="sm" tone="muted">{{ subtitle }}</ui-text>
+    </div>
+  </div>
+
+  <nav class="ui-sidebar__nav" [attr.aria-label]="navAriaLabel">
+    <ul class="ui-sidebar__list" role="list">
+      @for (item of items; track item.label) {
+        <li class="ui-sidebar__list-item">
+          <ui-nav-item
+            [label]="item.label"
+            [icon]="item.icon ?? 'home'"
+            [description]="item.description ?? ''"
+            [active]="item.active ?? false"
+            [disabled]="item.disabled ?? false"
+            [ariaLabel]="item.ariaLabel ?? item.label"
+            [routerLink]="item.path ?? null"
+          ></ui-nav-item>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <ui-divider></ui-divider>
+
+  <ui-user-info
+    [name]="userName"
+    [role]="userRole"
+    [initials]="userInitials"
+    ariaLabel="Informacoes do usuario"
+    size="sm"
+  ></ui-user-info>
+</aside>
+
+<nav class="ui-sidebar__mobile-nav" [attr.aria-label]="mobileNavAriaLabel">
+  <ul class="ui-sidebar__mobile-list" role="list">
+    @for (item of items; track item.label) {
+      <li class="ui-sidebar__mobile-item">
+        @if (!item.disabled && item.path) {
+          <a
+            class="ui-sidebar__mobile-link"
+            [routerLink]="item.path"
+            routerLinkActive="ui-sidebar__mobile-link--active"
+            [attr.aria-label]="item.ariaLabel ?? item.label"
+          >
+            <ui-icon [name]="iconName(item)" [icon]="iconDefinition(item)" [decorative]="true"></ui-icon>
+            <span class="ui-sidebar__mobile-label">{{ item.label }}</span>
+          </a>
+        } @else if (!item.disabled) {
+          <button class="ui-sidebar__mobile-link" type="button" [attr.aria-label]="item.ariaLabel ?? item.label">
+            <ui-icon [name]="iconName(item)" [icon]="iconDefinition(item)" [decorative]="true"></ui-icon>
+            <span class="ui-sidebar__mobile-label">{{ item.label }}</span>
+          </button>
+        } @else {
+          <span class="ui-sidebar__mobile-link ui-sidebar__mobile-link--disabled" [attr.aria-label]="item.label">
+            <ui-icon [name]="iconName(item)" [icon]="iconDefinition(item)" [decorative]="true"></ui-icon>
+            <span class="ui-sidebar__mobile-label">{{ item.label }}</span>
+          </span>
+        }
+      </li>
+    }
+  </ul>
+</nav>

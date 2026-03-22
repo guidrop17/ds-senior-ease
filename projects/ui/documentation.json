@@ -1,0 +1,2060 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Accent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    initials: 'MH',\n    tone: 'accent',\n  },\n}"
+            },
+            {
+                "name": "AccessibleToggle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Leitura em voz alta',\n    variant: 'secondary',\n    ariaLabel: 'Alternar leitura em voz alta',\n    ariaPressed: true,\n  },\n}"
+            },
+            {
+                "name": "Calendar",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    name: 'calendar',\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/stat.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Partial<SidebarComponent>) => ({\n    props: args,\n    template: `\n      <div style=\"height: 100vh; max-width: 288px;\">\n        <ui-sidebar\n          [brand]=\"brand\"\n          [subtitle]=\"subtitle\"\n          [userName]=\"userName\"\n          [userRole]=\"userRole\"\n          [userInitials]=\"userInitials\"\n          [navAriaLabel]=\"navAriaLabel\"\n          [mobileNavAriaLabel]=\"mobileNavAriaLabel\"\n          [items]=\"items\"\n        ></ui-sidebar>\n      </div>\n    `,\n  }),\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: () => ({\n    template: `\n      <ui-dashboard-layout>\n        <section sidebar style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); height: 100%;\">\n          Sidebar slot\n        </section>\n        <section header style=\"padding: var(--ui-space-4); background: var(--ui-color-surface); border-radius: var(--ui-radius-md);\">\n          Header slot\n        </section>\n        <section style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); border-radius: var(--ui-radius-lg);\">\n          Main content slot\n        </section>\n      </ui-dashboard-layout>\n    `,\n  }),\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Mensagens',\n    description: 'Em breve',\n    icon: 'message',\n    disabled: true,\n    ariaLabel: 'Mensagens indisponivel',\n  },\n}"
+            },
+            {
+                "name": "Ghost",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    variant: 'ghost',\n    label: 'Ghost action',\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    element: 'h2',\n    weight: 'semibold',\n    size: 'xl',\n  },\n}"
+            },
+            {
+                "name": "Horizontal",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Informative",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    name: 'bell',\n    decorative: false,\n    ariaLabel: 'Notificacoes',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<AvatarComponent>",
+                "defaultValue": "{\n  title: 'Atoms/Avatar',\n  component: AvatarComponent,\n  args: {\n    initials: 'SE',\n    size: 'md',\n    tone: 'primary',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BadgeComponent>",
+                "defaultValue": "{\n  title: 'Atoms/Badge',\n  component: BadgeComponent,\n  args: {\n    label: 'Status',\n    variant: 'primary',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ButtonComponent>",
+                "defaultValue": "{\n  title: 'Atoms/Button',\n  component: ButtonComponent,\n  args: {\n    label: 'Primary action',\n    variant: 'primary',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DividerComponent>",
+                "defaultValue": "{\n  title: 'Atoms/Divider',\n  component: DividerComponent,\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<IconComponent>",
+                "defaultValue": "{\n  title: 'Atoms/Icon',\n  component: IconComponent,\n  args: {\n    name: 'home',\n    decorative: true,\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TextComponent>",
+                "defaultValue": "{\n  title: 'Atoms/Text',\n  component: TextComponent,\n  render: (args: Partial<TextComponent>) => ({\n    props: args,\n    template: `\n      <ui-text [element]=\"element\" [tone]=\"tone\" [weight]=\"weight\" [size]=\"size\">\n        Escala tipografica do design system.\n      </ui-text>\n    `,\n  }),\n  args: {\n    element: 'p',\n    tone: 'default',\n    weight: 'regular',\n    size: 'md',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ListItemComponent>",
+                "defaultValue": "{\n  title: 'Molecules/List Item',\n  component: ListItemComponent,\n  args: {\n    title: 'Consulta geriatrica',\n    description: 'Dr. Renato, 14:30',\n    meta: 'Hoje',\n    badgeLabel: 'Confirmado',\n    badgeVariant: 'success',\n    icon: 'calendar',\n    ariaLabel: 'Consulta geriatrica hoje as 14 e 30 confirmada',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<NavItemComponent>",
+                "defaultValue": "{\n  title: 'Molecules/Nav Item',\n  component: NavItemComponent,\n  args: {\n    label: 'Visao geral',\n    description: 'Resumo do cuidado',\n    icon: 'home',\n    active: true,\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/stat.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<StatComponent>",
+                "defaultValue": "{\n  title: 'Molecules/Stat',\n  component: StatComponent,\n  args: {\n    label: 'Consultas confirmadas',\n    value: '12',\n    description: 'Semana atual',\n    tone: 'primary',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UserInfoComponent>",
+                "defaultValue": "{\n  title: 'Molecules/User Info',\n  component: UserInfoComponent,\n  args: {\n    name: 'Maria Helena',\n    role: 'Paciente acompanhada',\n    initials: 'MH',\n    ariaLabel: 'Informacoes de usuario de Maria Helena',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<AgendaListComponent>",
+                "defaultValue": "{\n  title: 'Organisms/Agenda List',\n  component: AgendaListComponent,\n  args: {\n    items: [\n      {\n        icon: 'calendar',\n        title: 'Consulta geriatrica',\n        description: 'Dr. Renato, 14:30',\n        meta: 'Hoje',\n        badgeLabel: 'Confirmado',\n        badgeVariant: 'success',\n      },\n      {\n        icon: 'clock',\n        title: 'Medicao de pressao',\n        description: 'Checklist com cuidadora',\n        meta: '16:00',\n        badgeLabel: 'Rotina',\n        badgeVariant: 'primary',\n      },\n    ],\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<HeaderComponent>",
+                "defaultValue": "{\n  title: 'Organisms/Header',\n  component: HeaderComponent,\n  args: {\n    badgeLabel: 'Playground',\n    title: 'Painel de acompanhamento',\n    subtitle: 'Biblioteca ui consumida a partir da API publica.',\n    actionLabel: 'Nova visita',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<HeroCardComponent>",
+                "defaultValue": "{\n  title: 'Organisms/Hero Card',\n  component: HeroCardComponent,\n  args: {\n    eyebrow: 'Senior Ease UI',\n    title: 'Design System escalavel para o workspace Angular.',\n    description: 'Componentes standalone organizados por Atomic Design e estilizados via tokens.',\n    primaryActionLabel: 'Explorar componentes',\n    secondaryActionLabel: 'Abrir Storybook',\n    highlightLabel: 'Tokens ativos',\n    highlightValue: '05 grupos',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<MaterialsListComponent>",
+                "defaultValue": "{\n  title: 'Organisms/Materials List',\n  component: MaterialsListComponent,\n  args: {\n    items: [\n      {\n        icon: 'book',\n        title: 'Guia de alimentacao assistida',\n        description: 'Boas praticas para a familia',\n        meta: 'PDF atualizado',\n        badgeLabel: 'Novo',\n        badgeVariant: 'warning',\n      },\n      {\n        icon: 'check',\n        title: 'Checklist de seguranca domestica',\n        description: 'Itens essenciais para prevencao',\n        meta: 'Leitura rapida',\n        badgeLabel: 'Recomendado',\n        badgeVariant: 'success',\n      },\n    ],\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SidebarComponent>",
+                "defaultValue": "{\n  title: 'Organisms/Sidebar',\n  component: SidebarComponent,\n  args: {\n    brand: 'Senior Ease',\n    subtitle: 'Atomic Design System',\n    userName: 'Maria Helena',\n    userRole: 'Paciente acompanhada',\n    userInitials: 'MH',\n    navAriaLabel: 'Navegacao principal',\n    mobileNavAriaLabel: 'Navegacao inferior',\n    items: [\n      {\n        label: 'Visao geral',\n        icon: 'home',\n        description: 'Resumo do cuidado',\n        active: true,\n        ariaLabel: 'Navegar para visao geral',\n      },\n      {\n        label: 'Agenda',\n        icon: 'calendar',\n        description: 'Consultas e visitas',\n        ariaLabel: 'Navegar para agenda',\n      },\n      {\n        label: 'Materiais',\n        icon: 'book',\n        description: 'Guias e apoio',\n        ariaLabel: 'Navegar para materiais',\n      },\n      {\n        label: 'Mensagens',\n        icon: 'message',\n        description: 'Em breve',\n        disabled: true,\n        ariaLabel: 'Mensagens indisponivel',\n      },\n    ],\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<StatsGridComponent>",
+                "defaultValue": "{\n  title: 'Organisms/Stats Grid',\n  component: StatsGridComponent,\n  args: {\n    items: [\n      { label: 'Consultas confirmadas', value: '12', description: 'Semana atual', tone: 'primary' },\n      { label: 'Planos revisados', value: '08', description: 'Ultimos 7 dias', tone: 'success' },\n      { label: 'Alertas ativos', value: '03', description: 'Acompanhamento diario', tone: 'warning' },\n    ],\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DashboardLayoutComponent>",
+                "defaultValue": "{\n  title: 'Templates/Dashboard Layout',\n  component: DashboardLayoutComponent,\n}"
+            },
+            {
+                "name": "MobileBottomNav",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Partial<SidebarComponent>) => ({\n    props: args,\n    template: `\n      <style>\n        .sb-mobile-demo .ui-sidebar__desktop {\n          display: none !important;\n        }\n        .sb-mobile-demo .ui-sidebar__mobile-nav {\n          display: block !important;\n          position: relative !important;\n          border: var(--ui-border-width) solid var(--ui-color-border);\n          border-radius: var(--ui-radius-lg);\n          margin-top: var(--ui-space-4);\n        }\n      </style>\n      <div class=\"sb-mobile-demo\" style=\"max-width: 390px; margin: 0 auto; padding: 24px;\">\n        <ui-sidebar\n          [brand]=\"brand\"\n          [subtitle]=\"subtitle\"\n          [userName]=\"userName\"\n          [userRole]=\"userRole\"\n          [userInitials]=\"userInitials\"\n          [navAriaLabel]=\"navAriaLabel\"\n          [mobileNavAriaLabel]=\"mobileNavAriaLabel\"\n          [items]=\"items\"\n        ></ui-sidebar>\n      </div>\n    `,\n  }),\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    a11y: {\n      test: 'todo',\n    },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "ResponsiveShell",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: () => ({\n    template: `\n      <ui-dashboard-layout>\n        <section sidebar style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); height: 100%;\">\n          Menu adaptativo (lateral no desktop, inferior no mobile)\n        </section>\n        <section header style=\"padding: var(--ui-space-4); background: var(--ui-color-surface); border-radius: var(--ui-radius-md);\">\n          Header responsivo\n        </section>\n        <section style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); border-radius: var(--ui-radius-lg); min-height: 40vh;\">\n          Conteudo principal com espaco reservado para o menu inferior no mobile\n        </section>\n      </ui-dashboard-layout>\n    `,\n  }),\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    variant: 'secondary',\n    label: 'Secondary action',\n  },\n}"
+            },
+            {
+                "name": "Success",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Confirmado',\n    variant: 'success',\n  },\n}"
+            },
+            {
+                "name": "Vertical",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    orientation: 'vertical',\n  },\n  render: (args: Partial<DividerComponent>) => ({\n    props: args,\n    template: `\n      <div style=\"height: 96px; display: flex; align-items: stretch;\">\n        <ui-divider [orientation]=\"orientation\"></ui-divider>\n      </div>\n    `,\n  }),\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<AvatarComponent>",
+                "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ButtonComponent>",
+                "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DividerComponent>",
+                "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<IconComponent>",
+                "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TextComponent>",
+                "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ListItemComponent>",
+                "file": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<NavItemComponent>",
+                "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<StatComponent>",
+                "file": "projects/ui/src/stories/molecules/stat.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UserInfoComponent>",
+                "file": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<AgendaListComponent>",
+                "file": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<HeaderComponent>",
+                "file": "projects/ui/src/stories/organisms/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<HeroCardComponent>",
+                "file": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<MaterialsListComponent>",
+                "file": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SidebarComponent>",
+                "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<StatsGridComponent>",
+                "file": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DashboardLayoutComponent>",
+                "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/ui/src/stories/atoms/avatar.stories.ts": [
+                {
+                    "name": "Accent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    initials: 'MH',\n    tone: 'accent',\n  },\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<AvatarComponent>",
+                    "defaultValue": "{\n  title: 'Atoms/Avatar',\n  component: AvatarComponent,\n  args: {\n    initials: 'SE',\n    size: 'md',\n    tone: 'primary',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/atoms/button.stories.ts": [
+                {
+                    "name": "AccessibleToggle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Leitura em voz alta',\n    variant: 'secondary',\n    ariaLabel: 'Alternar leitura em voz alta',\n    ariaPressed: true,\n  },\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "Ghost",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    variant: 'ghost',\n    label: 'Ghost action',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ButtonComponent>",
+                    "defaultValue": "{\n  title: 'Atoms/Button',\n  component: ButtonComponent,\n  args: {\n    label: 'Primary action',\n    variant: 'primary',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    variant: 'secondary',\n    label: 'Secondary action',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/atoms/icon.stories.ts": [
+                {
+                    "name": "Calendar",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    name: 'calendar',\n  },\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "Informative",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    name: 'bell',\n    decorative: false,\n    ariaLabel: 'Notificacoes',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<IconComponent>",
+                    "defaultValue": "{\n  title: 'Atoms/Icon',\n  component: IconComponent,\n  args: {\n    name: 'home',\n    decorative: true,\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/atoms/badge.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<BadgeComponent>",
+                    "defaultValue": "{\n  title: 'Atoms/Badge',\n  component: BadgeComponent,\n  args: {\n    label: 'Status',\n    variant: 'primary',\n  },\n}"
+                },
+                {
+                    "name": "Success",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Confirmado',\n    variant: 'success',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/atoms/text.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    element: 'h2',\n    weight: 'semibold',\n    size: 'xl',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TextComponent>",
+                    "defaultValue": "{\n  title: 'Atoms/Text',\n  component: TextComponent,\n  render: (args: Partial<TextComponent>) => ({\n    props: args,\n    template: `\n      <ui-text [element]=\"element\" [tone]=\"tone\" [weight]=\"weight\" [size]=\"size\">\n        Escala tipografica do design system.\n      </ui-text>\n    `,\n  }),\n  args: {\n    element: 'p',\n    tone: 'default',\n    weight: 'regular',\n    size: 'md',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/molecules/list-item.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ListItemComponent>",
+                    "defaultValue": "{\n  title: 'Molecules/List Item',\n  component: ListItemComponent,\n  args: {\n    title: 'Consulta geriatrica',\n    description: 'Dr. Renato, 14:30',\n    meta: 'Hoje',\n    badgeLabel: 'Confirmado',\n    badgeVariant: 'success',\n    icon: 'calendar',\n    ariaLabel: 'Consulta geriatrica hoje as 14 e 30 confirmada',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/molecules/nav-item.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Mensagens',\n    description: 'Em breve',\n    icon: 'message',\n    disabled: true,\n    ariaLabel: 'Mensagens indisponivel',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<NavItemComponent>",
+                    "defaultValue": "{\n  title: 'Molecules/Nav Item',\n  component: NavItemComponent,\n  args: {\n    label: 'Visao geral',\n    description: 'Resumo do cuidado',\n    icon: 'home',\n    active: true,\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/molecules/stat.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/stat.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/stat.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<StatComponent>",
+                    "defaultValue": "{\n  title: 'Molecules/Stat',\n  component: StatComponent,\n  args: {\n    label: 'Consultas confirmadas',\n    value: '12',\n    description: 'Semana atual',\n    tone: 'primary',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/molecules/user-info.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UserInfoComponent>",
+                    "defaultValue": "{\n  title: 'Molecules/User Info',\n  component: UserInfoComponent,\n  args: {\n    name: 'Maria Helena',\n    role: 'Paciente acompanhada',\n    initials: 'MH',\n    ariaLabel: 'Informacoes de usuario de Maria Helena',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/organisms/agenda-list.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<AgendaListComponent>",
+                    "defaultValue": "{\n  title: 'Organisms/Agenda List',\n  component: AgendaListComponent,\n  args: {\n    items: [\n      {\n        icon: 'calendar',\n        title: 'Consulta geriatrica',\n        description: 'Dr. Renato, 14:30',\n        meta: 'Hoje',\n        badgeLabel: 'Confirmado',\n        badgeVariant: 'success',\n      },\n      {\n        icon: 'clock',\n        title: 'Medicao de pressao',\n        description: 'Checklist com cuidadora',\n        meta: '16:00',\n        badgeLabel: 'Rotina',\n        badgeVariant: 'primary',\n      },\n    ],\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/organisms/header.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<HeaderComponent>",
+                    "defaultValue": "{\n  title: 'Organisms/Header',\n  component: HeaderComponent,\n  args: {\n    badgeLabel: 'Playground',\n    title: 'Painel de acompanhamento',\n    subtitle: 'Biblioteca ui consumida a partir da API publica.',\n    actionLabel: 'Nova visita',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/organisms/hero-card.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<HeroCardComponent>",
+                    "defaultValue": "{\n  title: 'Organisms/Hero Card',\n  component: HeroCardComponent,\n  args: {\n    eyebrow: 'Senior Ease UI',\n    title: 'Design System escalavel para o workspace Angular.',\n    description: 'Componentes standalone organizados por Atomic Design e estilizados via tokens.',\n    primaryActionLabel: 'Explorar componentes',\n    secondaryActionLabel: 'Abrir Storybook',\n    highlightLabel: 'Tokens ativos',\n    highlightValue: '05 grupos',\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/organisms/materials-list.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<MaterialsListComponent>",
+                    "defaultValue": "{\n  title: 'Organisms/Materials List',\n  component: MaterialsListComponent,\n  args: {\n    items: [\n      {\n        icon: 'book',\n        title: 'Guia de alimentacao assistida',\n        description: 'Boas praticas para a familia',\n        meta: 'PDF atualizado',\n        badgeLabel: 'Novo',\n        badgeVariant: 'warning',\n      },\n      {\n        icon: 'check',\n        title: 'Checklist de seguranca domestica',\n        description: 'Itens essenciais para prevencao',\n        meta: 'Leitura rapida',\n        badgeLabel: 'Recomendado',\n        badgeVariant: 'success',\n      },\n    ],\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/organisms/sidebar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Partial<SidebarComponent>) => ({\n    props: args,\n    template: `\n      <div style=\"height: 100vh; max-width: 288px;\">\n        <ui-sidebar\n          [brand]=\"brand\"\n          [subtitle]=\"subtitle\"\n          [userName]=\"userName\"\n          [userRole]=\"userRole\"\n          [userInitials]=\"userInitials\"\n          [navAriaLabel]=\"navAriaLabel\"\n          [mobileNavAriaLabel]=\"mobileNavAriaLabel\"\n          [items]=\"items\"\n        ></ui-sidebar>\n      </div>\n    `,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SidebarComponent>",
+                    "defaultValue": "{\n  title: 'Organisms/Sidebar',\n  component: SidebarComponent,\n  args: {\n    brand: 'Senior Ease',\n    subtitle: 'Atomic Design System',\n    userName: 'Maria Helena',\n    userRole: 'Paciente acompanhada',\n    userInitials: 'MH',\n    navAriaLabel: 'Navegacao principal',\n    mobileNavAriaLabel: 'Navegacao inferior',\n    items: [\n      {\n        label: 'Visao geral',\n        icon: 'home',\n        description: 'Resumo do cuidado',\n        active: true,\n        ariaLabel: 'Navegar para visao geral',\n      },\n      {\n        label: 'Agenda',\n        icon: 'calendar',\n        description: 'Consultas e visitas',\n        ariaLabel: 'Navegar para agenda',\n      },\n      {\n        label: 'Materiais',\n        icon: 'book',\n        description: 'Guias e apoio',\n        ariaLabel: 'Navegar para materiais',\n      },\n      {\n        label: 'Mensagens',\n        icon: 'message',\n        description: 'Em breve',\n        disabled: true,\n        ariaLabel: 'Mensagens indisponivel',\n      },\n    ],\n  },\n}"
+                },
+                {
+                    "name": "MobileBottomNav",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Partial<SidebarComponent>) => ({\n    props: args,\n    template: `\n      <style>\n        .sb-mobile-demo .ui-sidebar__desktop {\n          display: none !important;\n        }\n        .sb-mobile-demo .ui-sidebar__mobile-nav {\n          display: block !important;\n          position: relative !important;\n          border: var(--ui-border-width) solid var(--ui-color-border);\n          border-radius: var(--ui-radius-lg);\n          margin-top: var(--ui-space-4);\n        }\n      </style>\n      <div class=\"sb-mobile-demo\" style=\"max-width: 390px; margin: 0 auto; padding: 24px;\">\n        <ui-sidebar\n          [brand]=\"brand\"\n          [subtitle]=\"subtitle\"\n          [userName]=\"userName\"\n          [userRole]=\"userRole\"\n          [userInitials]=\"userInitials\"\n          [navAriaLabel]=\"navAriaLabel\"\n          [mobileNavAriaLabel]=\"mobileNavAriaLabel\"\n          [items]=\"items\"\n        ></ui-sidebar>\n      </div>\n    `,\n  }),\n}"
+                }
+            ],
+            "projects/ui/src/stories/organisms/stats-grid.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<StatsGridComponent>",
+                    "defaultValue": "{\n  title: 'Organisms/Stats Grid',\n  component: StatsGridComponent,\n  args: {\n    items: [\n      { label: 'Consultas confirmadas', value: '12', description: 'Semana atual', tone: 'primary' },\n      { label: 'Planos revisados', value: '08', description: 'Ultimos 7 dias', tone: 'success' },\n      { label: 'Alertas ativos', value: '03', description: 'Acompanhamento diario', tone: 'warning' },\n    ],\n  },\n}"
+                }
+            ],
+            "projects/ui/src/stories/templates/dashboard-layout.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: () => ({\n    template: `\n      <ui-dashboard-layout>\n        <section sidebar style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); height: 100%;\">\n          Sidebar slot\n        </section>\n        <section header style=\"padding: var(--ui-space-4); background: var(--ui-color-surface); border-radius: var(--ui-radius-md);\">\n          Header slot\n        </section>\n        <section style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); border-radius: var(--ui-radius-lg);\">\n          Main content slot\n        </section>\n      </ui-dashboard-layout>\n    `,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DashboardLayoutComponent>",
+                    "defaultValue": "{\n  title: 'Templates/Dashboard Layout',\n  component: DashboardLayoutComponent,\n}"
+                },
+                {
+                    "name": "ResponsiveShell",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: () => ({\n    template: `\n      <ui-dashboard-layout>\n        <section sidebar style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); height: 100%;\">\n          Menu adaptativo (lateral no desktop, inferior no mobile)\n        </section>\n        <section header style=\"padding: var(--ui-space-4); background: var(--ui-color-surface); border-radius: var(--ui-radius-md);\">\n          Header responsivo\n        </section>\n        <section style=\"padding: var(--ui-space-6); background: var(--ui-color-surface); border-radius: var(--ui-radius-lg); min-height: 40vh;\">\n          Conteudo principal com espaco reservado para o menu inferior no mobile\n        </section>\n      </ui-dashboard-layout>\n    `,\n  }),\n}"
+                }
+            ],
+            "projects/ui/src/stories/atoms/divider.stories.ts": [
+                {
+                    "name": "Horizontal",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DividerComponent>",
+                    "defaultValue": "{\n  title: 'Atoms/Divider',\n  component: DividerComponent,\n}"
+                },
+                {
+                    "name": "Vertical",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    orientation: 'vertical',\n  },\n  render: (args: Partial<DividerComponent>) => ({\n    props: args,\n    template: `\n      <div style=\"height: 96px; display: flex; align-items: stretch;\">\n        <ui-divider [orientation]=\"orientation\"></ui-divider>\n      </div>\n    `,\n  }),\n}"
+                }
+            ],
+            "projects/ui/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ui/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    a11y: {\n      test: 'todo',\n    },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    layout: 'fullscreen',\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/ui/src/stories/atoms/avatar.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<AvatarComponent>",
+                    "file": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/atoms/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BadgeComponent>",
+                    "file": "projects/ui/src/stories/atoms/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/atoms/button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ButtonComponent>",
+                    "file": "projects/ui/src/stories/atoms/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/atoms/divider.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DividerComponent>",
+                    "file": "projects/ui/src/stories/atoms/divider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/atoms/icon.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<IconComponent>",
+                    "file": "projects/ui/src/stories/atoms/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/atoms/text.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TextComponent>",
+                    "file": "projects/ui/src/stories/atoms/text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/molecules/list-item.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ListItemComponent>",
+                    "file": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/molecules/nav-item.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<NavItemComponent>",
+                    "file": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/molecules/stat.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<StatComponent>",
+                    "file": "projects/ui/src/stories/molecules/stat.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/molecules/user-info.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UserInfoComponent>",
+                    "file": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/organisms/agenda-list.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<AgendaListComponent>",
+                    "file": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/organisms/header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<HeaderComponent>",
+                    "file": "projects/ui/src/stories/organisms/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/organisms/hero-card.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<HeroCardComponent>",
+                    "file": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/organisms/materials-list.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<MaterialsListComponent>",
+                    "file": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/organisms/sidebar.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SidebarComponent>",
+                    "file": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/organisms/stats-grid.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<StatsGridComponent>",
+                    "file": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/ui/src/stories/templates/dashboard-layout.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DashboardLayoutComponent>",
+                    "file": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": []
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/ui/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Accent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/avatar.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Success",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/badge.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "AccessibleToggle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Ghost",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Horizontal",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Vertical",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/divider.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Calendar",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Informative",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/icon.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/atoms/text.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/list-item.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/nav-item.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/stat.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/stat.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/stat.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/molecules/user-info.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/agenda-list.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/header.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/hero-card.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/materials-list.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MobileBottomNav",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/sidebar.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/organisms/stats-grid.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ResponsiveShell",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ui/src/stories/templates/dashboard-layout.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

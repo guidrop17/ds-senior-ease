@@ -1,0 +1,8 @@
+<span
+  class="ui-divider"
+  [class.ui-divider--vertical]="orientation === 'vertical'"
+  [attr.role]="ariaLabel ? 'separator' : null"
+  [attr.aria-label]="ariaLabel || null"
+  [attr.aria-orientation]="orientation"
+  [attr.aria-hidden]="ariaLabel ? null : true"
+></span>

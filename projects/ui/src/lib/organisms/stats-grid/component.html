@@ -1,0 +1,10 @@
+<section class="ui-stats-grid">
+  @for (item of items; track item.label) {
+    <ui-stat
+      [label]="item.label"
+      [value]="item.value"
+      [description]="item.description ?? ''"
+      [tone]="item.tone ?? 'primary'"
+    ></ui-stat>
+  }
+</section>

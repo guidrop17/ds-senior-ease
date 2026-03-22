@@ -1,0 +1,10 @@
+<span
+  class="ui-badge"
+  [attr.aria-label]="ariaLabel || null"
+  [class.ui-badge--primary]="variant === 'primary'"
+  [class.ui-badge--success]="variant === 'success'"
+  [class.ui-badge--warning]="variant === 'warning'"
+  [class.ui-badge--danger]="variant === 'danger'"
+>
+  <ng-content>{{ label }}</ng-content>
+</span>

@@ -1,0 +1,41 @@
+:host {
+  display: contents;
+}
+
+.ui-text {
+  color: var(--ui-color-text);
+  font-family: var(--ui-font-family-base);
+  font-size: var(--ui-font-size-300);
+  font-weight: var(--ui-font-weight-regular);
+  line-height: var(--ui-line-height-base);
+  margin: 0;
+}
+
+.ui-text[data-tone='muted'] {
+  color: var(--ui-color-text-muted);
+}
+
+.ui-text[data-tone='primary'] {
+  color: var(--ui-color-primary-strong);
+}
+
+.ui-text[data-weight='medium'] {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.ui-text[data-weight='semibold'] {
+  font-weight: var(--ui-font-weight-semibold);
+}
+
+.ui-text[data-size='sm'] {
+  font-size: var(--ui-font-size-200);
+}
+
+.ui-text[data-size='lg'] {
+  font-size: var(--ui-font-size-400);
+}
+
+.ui-text[data-size='xl'] {
+  font-size: var(--ui-font-size-600);
+  line-height: var(--ui-line-height-tight);
+}

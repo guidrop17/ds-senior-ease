@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.ui-stat {
+  background: var(--ui-color-surface);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-sm);
+  display: grid;
+  gap: var(--ui-space-2);
+  padding: var(--ui-space-5);
+}
+
+.ui-stat[data-tone='primary'] {
+  border-color: var(--ui-color-primary-soft);
+}
+
+.ui-stat[data-tone='success'] {
+  border-color: var(--ui-color-success-soft);
+}
+
+.ui-stat[data-tone='warning'] {
+  border-color: var(--ui-color-warning-soft);
+}

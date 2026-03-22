@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.ui-header {
+  align-items: center;
+  display: flex;
+  gap: var(--ui-space-5);
+  justify-content: space-between;
+}
+
+.ui-header__copy {
+  display: grid;
+  gap: var(--ui-space-2);
+}
+
+@media (max-width: 48rem) {
+  .ui-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

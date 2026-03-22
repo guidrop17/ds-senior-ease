@@ -1,0 +1,8 @@
+<span
+  class="ui-icon"
+  [attr.role]="decorative ? null : 'img'"
+  [attr.aria-hidden]="decorative ? true : null"
+  [attr.aria-label]="decorative ? null : (ariaLabel || name)"
+>
+  <fa-icon [icon]="resolvedIcon"></fa-icon>
+</span>

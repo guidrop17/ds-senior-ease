@@ -1,0 +1,11 @@
+<span
+  class="ui-avatar"
+  [attr.aria-label]="ariaLabel || null"
+  [attr.role]="ariaLabel ? 'img' : null"
+  [class.ui-avatar--sm]="size === 'sm'"
+  [class.ui-avatar--lg]="size === 'lg'"
+  [class.ui-avatar--accent]="tone === 'accent'"
+  [class.ui-avatar--neutral]="tone === 'neutral'"
+>
+  <ng-content>{{ initials }}</ng-content>
+</span>

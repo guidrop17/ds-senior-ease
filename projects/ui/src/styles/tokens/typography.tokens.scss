@@ -1,5 +1,5 @@
 :root {
-  --ui-font-family-base: 'Inter', 'Segoe UI', sans-serif;
+  --ui-font-family-base: var(--font-sans, 'Inter', 'Segoe UI', sans-serif);
   --ui-font-size-100: 0.75rem;
   --ui-font-size-200: 0.875rem;
   --ui-font-size-300: 1rem;

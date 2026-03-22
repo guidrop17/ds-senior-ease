@@ -90,26 +90,33 @@
     padding: 0;
   }
 
-  .ui-sidebar__mobile-link {
-    align-items: center;
-    background: transparent;
-    border: 0;
-    color: var(--ui-color-text-muted);
-    cursor: pointer;
-    display: inline-flex;
+.ui-sidebar__mobile-link {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--ui-color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
     flex-direction: column;
     font-size: var(--ui-font-size-100);
     font-weight: var(--ui-font-weight-medium);
     gap: var(--ui-space-1);
     height: 100%;
-    justify-content: center;
-    text-decoration: none;
-    width: 100%;
-  }
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+  width: 100%;
+}
 
-  .ui-sidebar__mobile-link--active {
-    color: var(--ui-color-primary-strong);
-  }
+.ui-sidebar__mobile-link:not(.ui-sidebar__mobile-link--disabled):hover {
+  background: var(--ui-color-surface-muted);
+}
+
+.ui-sidebar__mobile-link--active {
+  color: var(--ui-color-primary-strong);
+}
 
   .ui-sidebar__mobile-link--disabled {
     cursor: not-allowed;
@@ -124,4 +131,28 @@
   .ui-sidebar__mobile-label {
     line-height: 1;
   }
+}
+
+:host-context(.ui-theme-high-contrast) .ui-sidebar__mobile-nav,
+:host-context(.theme-high-contrast) .ui-sidebar__mobile-nav {
+  background: #000000;
+  border-top-color: #3a3a3a;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-sidebar__mobile-link,
+:host-context(.theme-high-contrast) .ui-sidebar__mobile-link {
+  color: #f0f0f0;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-sidebar__mobile-link:not(.ui-sidebar__mobile-link--disabled):hover,
+:host-context(.theme-high-contrast) .ui-sidebar__mobile-link:not(.ui-sidebar__mobile-link--disabled):hover {
+  background: #1a1a00;
+  color: #ffff00;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-sidebar__mobile-link--active,
+:host-context(.theme-high-contrast) .ui-sidebar__mobile-link--active {
+  background: #1a1a00;
+  box-shadow: inset 0 0 0 var(--ui-border-width) #ffff00;
+  color: #ffff00;
 }

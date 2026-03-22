@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -21,4 +21,10 @@ export class ButtonComponent {
   @Input() ariaExpanded: boolean | null = null;
   @Input() ariaControls = '';
   @Input() ariaDescribedBy = '';
+
+  @Output() buttonClick = new EventEmitter<MouseEvent>();
+
+  protected emitClick(event: MouseEvent): void {
+    this.buttonClick.emit(event);
+  }
 }

@@ -18,6 +18,30 @@
   max-width: 52rem;
 }
 
+.accessibility-surface {
+  gap: var(--ui-space-5);
+}
+
+.control-group {
+  display: grid;
+  gap: var(--ui-space-3);
+}
+
+.rate-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate-field {
+  display: grid;
+}
+
+.rate-input {
+  accent-color: var(--ui-color-primary);
+  inline-size: 100%;
+}
+
 .surface {
   background: var(--ui-color-surface);
   border: var(--ui-border-width) solid var(--ui-color-border);

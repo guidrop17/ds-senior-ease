@@ -12,7 +12,7 @@ body {
   background: var(--ui-color-page);
   color: var(--ui-color-text);
   font-family: var(--ui-font-family-base);
-  font-size: var(--ui-font-size-300);
+  font-size: var(--font-size-base, var(--ui-font-size-300));
   line-height: var(--ui-line-height-base);
   margin: 0;
 }
@@ -29,29 +29,75 @@ a {
   text-decoration: none;
 }
 
-.ui-theme-high-contrast {
+.ui-theme-high-contrast,
+.theme-high-contrast {
+  --color-foreground: #f0f0f0;
+  --color-primary: #ffff00;
+  --color-primary-dark: #e6b800;
+  --color-primary-light: #ffff00;
+  --color-primary-surface: #1a1a00;
+  --color-accent: #ffcc00;
+  --color-accent-hover: #e6b800;
+  --color-surface: #000000;
+  --color-card: #111111;
+  --color-muted: #aaaaaa;
+  --color-border: #3a3a3a;
+  --color-toggle-off: #444444;
+  --color-success: #44dd55;
+  --color-success-light: #001100;
+  --color-warning: #ffcc00;
+  --color-warning-light: #1a1200;
+  --color-danger: #ff5555;
+  --color-danger-light: #1a0000;
+
   --ui-color-page: #000000;
   --ui-color-surface: #111111;
-  --ui-color-surface-muted: #1c1c1c;
+  --ui-color-surface-muted: #1a1a00;
   --ui-color-border: #3a3a3a;
-  --ui-color-text: #f5f5f5;
-  --ui-color-text-muted: #d1d1d1;
+  --ui-color-text: #f0f0f0;
+  --ui-color-text-muted: #aaaaaa;
   --ui-color-text-inverse: #000000;
-  --ui-color-primary: #000000;
-  --ui-color-primary-strong: #000000;
-  --ui-color-primary-soft: #fff59d;
-  --ui-color-accent: #ffd54f;
-  --ui-color-accent-soft: #fff8dc;
-  --ui-color-success: #7ef29a;
-  --ui-color-success-soft: #0b2814;
-  --ui-color-warning: #ffd54f;
-  --ui-color-warning-soft: #2b2406;
-  --ui-color-danger: #ff7f7f;
-  --ui-color-danger-soft: #2e1111;
+  --ui-color-primary: #ffff00;
+  --ui-color-primary-strong: #ffff00;
+  --ui-color-primary-soft: #1a1a00;
+  --ui-color-accent: #ffcc00;
+  --ui-color-accent-soft: #1a1a00;
+  --ui-color-success: #44dd55;
+  --ui-color-success-soft: #001100;
+  --ui-color-warning: #ffcc00;
+  --ui-color-warning-soft: #1a1200;
+  --ui-color-danger: #ff5555;
+  --ui-color-danger-soft: #1a0000;
   --ui-color-focus-ring: #ffff00;
 }
 
-.ui-theme-soft {
+.ui-theme-high-contrast .text-primary,
+.theme-high-contrast .text-primary {
+  color: #ffff00;
+}
+
+.ui-theme-high-contrast .border-primary,
+.theme-high-contrast .border-primary {
+  border-color: #ffff00;
+}
+
+.ui-theme-high-contrast .rounded-full.bg-primary,
+.theme-high-contrast .rounded-full.bg-primary {
+  background-color: #ffff00;
+}
+
+.ui-theme-high-contrast [role='switch'].bg-primary span,
+.theme-high-contrast [role='switch'].bg-primary span {
+  background-color: #000000;
+}
+
+.ui-theme-high-contrast .bg-accent,
+.theme-high-contrast .bg-accent {
+  color: #000000;
+}
+
+.ui-theme-soft,
+.theme-soft {
   --ui-color-page: #f8f4f0;
   --ui-color-surface: #ffffff;
   --ui-color-surface-muted: #f2ede7;
@@ -65,28 +111,42 @@ a {
   --ui-color-accent-soft: #f6eee4;
 }
 
-.ui-font-small {
+.ui-font-small,
+.font-small {
+  --font-size-base: 14px;
   font-size: 0.875rem;
 }
 
-.ui-font-large {
+.ui-font-large,
+.font-large {
+  --font-size-base: 20px;
   font-size: 1.125rem;
 }
 
-.ui-font-x-large {
+.ui-font-x-large,
+.font-x-large {
+  --font-size-base: 24px;
   font-size: 1.25rem;
 }
 
-.ui-font-xx-large {
+.ui-font-xx-large,
+.font-xx-large {
+  --font-size-base: 28px;
   font-size: 1.5rem;
 }
 
 .ui-dyslexia-font,
+.dyslexia-font,
 .ui-dyslexia-font body,
+.dyslexia-font body,
 .ui-dyslexia-font input,
+.dyslexia-font input,
 .ui-dyslexia-font textarea,
+.dyslexia-font textarea,
 .ui-dyslexia-font button,
-.ui-dyslexia-font select {
+.dyslexia-font button,
+.ui-dyslexia-font select,
+.dyslexia-font select {
   font-family: 'Atkinson Hyperlegible', 'Inter', sans-serif !important;
   letter-spacing: 0.03em;
   word-spacing: 0.08em;

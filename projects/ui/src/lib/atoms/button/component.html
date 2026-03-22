@@ -2,6 +2,7 @@
   class="ui-button"
   type="button"
   [disabled]="disabled"
+  (click)="emitClick($event)"
   [attr.aria-label]="ariaLabel || null"
   [attr.aria-pressed]="ariaPressed"
   [attr.aria-expanded]="ariaExpanded"

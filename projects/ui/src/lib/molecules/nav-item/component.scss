@@ -5,7 +5,7 @@
 .ui-nav-item {
   align-items: center;
   background: transparent;
-  border: 0;
+  border: var(--ui-border-width) solid transparent;
   border-radius: var(--ui-radius-md);
   color: var(--ui-color-text);
   cursor: pointer;
@@ -15,7 +15,15 @@
   padding: var(--ui-space-3);
   text-align: left;
   text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
   width: 100%;
+}
+
+.ui-nav-item:not(.ui-nav-item--disabled):hover {
+  background: var(--ui-color-surface-muted);
 }
 
 .ui-nav-item:focus-visible {
@@ -25,6 +33,7 @@
 
 .ui-nav-item--active {
   background: var(--ui-color-primary-soft);
+  border-color: var(--ui-color-primary);
   color: var(--ui-color-primary-strong);
 }
 
@@ -51,4 +60,34 @@
 .ui-nav-item--disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-nav-item,
+:host-context(.theme-high-contrast) .ui-nav-item {
+  border-color: var(--ui-color-border);
+}
+
+:host-context(.ui-theme-high-contrast) .ui-nav-item:not(.ui-nav-item--disabled):hover,
+:host-context(.theme-high-contrast) .ui-nav-item:not(.ui-nav-item--disabled):hover {
+  background: #1a1a00;
+  color: #ffff00;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-nav-item--active,
+:host-context(.theme-high-contrast) .ui-nav-item--active {
+  background: #1a1a00;
+  border-color: #ffff00;
+  color: #ffff00;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-nav-item__icon,
+:host-context(.theme-high-contrast) .ui-nav-item__icon {
+  background: #000000;
+  border: var(--ui-border-width) solid #3a3a3a;
+}
+
+:host-context(.ui-theme-high-contrast) .ui-nav-item--active .ui-nav-item__icon,
+:host-context(.theme-high-contrast) .ui-nav-item--active .ui-nav-item__icon {
+  background: #000000;
+  border-color: #ffff00;
 }

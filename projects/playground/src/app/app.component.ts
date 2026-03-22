@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
+  AccessibilityService,
   AgendaListComponent,
   AvatarComponent,
   BadgeComponent,
@@ -18,10 +19,12 @@ import {
   TextComponent,
   UserInfoComponent,
   type BadgeVariant,
+  type FontSize,
   type IconName,
   type ListItemData,
   type NavItemData,
   type StatItem,
+  type Theme,
 } from 'ui';
 
 @Component({
@@ -50,6 +53,11 @@ import {
   styleUrls: ['./app.component.scss'],
 })
 export class App {
+  private readonly accessibility = inject(AccessibilityService);
+
+  protected readonly fontSizes: FontSize[] = ['small', 'medium', 'large', 'x-large', 'xx-large'];
+  protected readonly themes: Theme[] = ['default', 'high-contrast', 'soft'];
+
   protected readonly navItems: NavItemData[] = [
     {
       label: 'Visao geral',
@@ -166,4 +174,48 @@ export class App {
     badgeVariant: 'warning',
     ariaLabel: 'Visita domiciliar amanha com prioridade',
   };
+
+  protected get currentTheme(): Theme {
+    return this.accessibility.theme();
+  }
+
+  protected get currentFontSize(): FontSize {
+    return this.accessibility.fontSize();
+  }
+
+  protected get currentVoiceReading(): boolean {
+    return this.accessibility.voiceReading();
+  }
+
+  protected get currentSpeechRate(): number {
+    return this.accessibility.speechRate();
+  }
+
+  protected get currentDyslexiaFont(): boolean {
+    return this.accessibility.dyslexiaFont();
+  }
+
+  protected applyTheme(theme: Theme): void {
+    this.accessibility.theme.set(theme);
+  }
+
+  protected applyFontSize(size: FontSize): void {
+    this.accessibility.fontSize.set(size);
+  }
+
+  protected toggleVoiceReading(): void {
+    this.accessibility.voiceReading.set(!this.accessibility.voiceReading());
+  }
+
+  protected toggleDyslexiaFont(): void {
+    this.accessibility.dyslexiaFont.set(!this.accessibility.dyslexiaFont());
+  }
+
+  protected updateSpeechRate(event: Event): void {
+    const target = event.target as HTMLInputElement | null;
+    const nextValue = Number.parseFloat(target?.value ?? '');
+    if (!Number.isNaN(nextValue)) {
+      this.accessibility.speechRate.set(nextValue);
+    }
+  }
 }

@@ -64,7 +64,7 @@
 
 :host-context(.ui-theme-high-contrast) .ui-nav-item,
 :host-context(.theme-high-contrast) .ui-nav-item {
-  border-color: var(--ui-color-border);
+  border-color: transparent;
 }
 
 :host-context(.ui-theme-high-contrast) .ui-nav-item:not(.ui-nav-item--disabled):hover,
@@ -76,18 +76,18 @@
 :host-context(.ui-theme-high-contrast) .ui-nav-item--active,
 :host-context(.theme-high-contrast) .ui-nav-item--active {
   background: #1a1a00;
-  border-color: #ffff00;
+  border-color: transparent;
   color: #ffff00;
 }
 
 :host-context(.ui-theme-high-contrast) .ui-nav-item__icon,
 :host-context(.theme-high-contrast) .ui-nav-item__icon {
   background: #000000;
-  border: var(--ui-border-width) solid #3a3a3a;
+  border: 0;
 }
 
 :host-context(.ui-theme-high-contrast) .ui-nav-item--active .ui-nav-item__icon,
 :host-context(.theme-high-contrast) .ui-nav-item--active .ui-nav-item__icon {
   background: #000000;
-  border-color: #ffff00;
+  border: 0;
 }

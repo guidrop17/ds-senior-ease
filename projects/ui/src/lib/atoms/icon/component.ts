@@ -11,6 +11,7 @@ import {
   faClock,
   faEnvelope,
   faHouse,
+  faUniversalAccess,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +24,8 @@ export type IconName =
   | 'clock'
   | 'home'
   | 'message'
-  | 'user';
+  | 'user'
+  | 'accessibility'
 export type IconValue = IconName | IconDefinition;
 
 @Component({
@@ -49,6 +51,7 @@ export class IconComponent {
     home: faHouse,
     message: faEnvelope,
     user: faUser,
+    accessibility: faUniversalAccess
   };
 
   protected get resolvedIcon(): IconDefinition {

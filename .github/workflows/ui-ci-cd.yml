@@ -10,7 +10,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  id-token: write
 
 concurrency:
   group: ui-ci-cd-${{ github.ref }}
@@ -38,17 +39,16 @@ jobs:
         run: npm run build:ui
 
   publish-npm:
-    name: Publish UI to npm
+    name: Publish UI + GitHub Release
     needs: ci
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node for npm publish
         uses: actions/setup-node@v4
@@ -68,6 +68,7 @@ jobs:
           PACKAGE_VERSION="$(node -p "require('./projects/ui/package.json').version")"
           echo "package_name=$PACKAGE_NAME" >> "$GITHUB_OUTPUT"
           echo "package_version=$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag_name=ui-v$PACKAGE_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Check if version already exists on npm
         id: npm-check
@@ -94,3 +95,21 @@ jobs:
         run: npm publish ./dist/ui --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create and push release tag
+        if: steps.npm-check.outputs.should_publish == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag "${{ steps.pkg.outputs.tag_name }}"
+          git push origin "${{ steps.pkg.outputs.tag_name }}"
+
+      - name: Create GitHub Release (Latest)
+        if: steps.npm-check.outputs.should_publish == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.pkg.outputs.tag_name }}
+          name: UI v${{ steps.pkg.outputs.package_version }}
+          generate_release_notes: true
+          make_latest: true

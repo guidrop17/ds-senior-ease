@@ -83,8 +83,9 @@
   }
 
   .ui-sidebar__mobile-list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     height: var(--ui-layout-mobile-nav-height);
     list-style: none;
     margin: 0;

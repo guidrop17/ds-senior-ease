@@ -60,7 +60,7 @@ export class App {
 
   protected readonly navItems: NavItemData[] = [
     {
-      label: 'Visao geral',
+      label: 'Inicio',
       path: '/inicio',
       icon: 'home',
       active: true,
@@ -68,14 +68,14 @@ export class App {
       ariaLabel: 'Navegar para visao geral',
     },
     {
-      label: 'Agenda',
+      label: 'Acessibilidade',
       path: '/agenda',
       icon: 'calendar',
       description: 'Consultas e visitas',
       ariaLabel: 'Navegar para agenda',
     },
     {
-      label: 'Materiais',
+      label: 'Perfil',
       path: '/materiais',
       icon: 'book',
       description: 'Guias e apoio',

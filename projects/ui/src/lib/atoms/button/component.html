@@ -10,6 +10,9 @@
   [attr.aria-describedby]="ariaDescribedBy || null"
   [class.ui-button--secondary]="variant === 'secondary'"
   [class.ui-button--ghost]="variant === 'ghost'"
+  [class.ui-button--ghost-secondary]="variant === 'ghost' && context === 'secondary'"
+  [class.ui-button--full-width]="fullWidth"
+  [class.ui-button--full-height]="fullHeight"
   [class.ui-button--sm]="size === 'sm'"
   [class.ui-button--lg]="size === 'lg'"
 >

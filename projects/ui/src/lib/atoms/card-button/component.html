@@ -4,6 +4,10 @@
   [disabled]="disabled"
   [attr.aria-label]="ariaLabel || null"
   (click)="emitClick($event)"
+  [class.ui-card-button--primary]="variant === 'primary'"
+  [class.ui-card-button--secondary]="variant === 'secondary'"
+  [class.ui-card-button--ghost]="variant === 'ghost'"
+  [class.ui-card-button--ghost-secondary]="variant === 'ghost' && context === 'secondary'"
 >
   <span class="ui-card-button__leading">
     @if (leading) {

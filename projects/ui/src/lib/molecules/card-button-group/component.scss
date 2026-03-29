@@ -1,0 +1,58 @@
+.ui-card-button-group {
+  background: var(--ui-color-surface);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-lg);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.ui-card-button-group ::ng-deep ui-card-button {
+  display: flex;
+  flex: 1;
+  width: auto;
+  align-items: stretch;
+}
+
+.ui-card-button-group__divider {
+  width: var(--ui-border-width);
+  background-color: var(--ui-color-border);
+  margin: var(--ui-space-2) 0;
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  min-height: 3rem;
+  width: 100%;
+  padding: var(--ui-space-3) var(--ui-space-4);
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button:hover:not(:disabled) {
+  background: var(--ui-color-primary-soft);
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button:focus-visible {
+  outline: 0.1875rem solid var(--ui-color-focus-ring);
+  outline-offset: -0.1875rem;
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button__icon-container {
+  height: 2rem;
+  width: 2rem;
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button__icon-container :is(.ui-icon, .ui-icon fa-icon) {
+  font-size: var(--ui-font-size-400);
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button__title {
+  font-size: var(--ui-font-size-200);
+}
+
+.ui-card-button-group ::ng-deep .ui-card-button__description {
+  display: none;
+}
+
+

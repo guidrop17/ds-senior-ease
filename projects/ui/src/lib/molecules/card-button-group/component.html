@@ -1,0 +1,25 @@
+<div class="ui-card-button-group">
+  @for (item of items; track $index; let last = $last) {
+    <ui-card-button
+      [title]="item.title"
+      [description]="item.description ?? ''"
+      [leading]="item.leading ?? null"
+      [useLeadingIcon]="item.useLeadingIcon ?? false"
+      [trailing]="item.trailing ?? null"
+      [useTrailingIcon]="item.useTrailingIcon ?? false"
+      [disabled]="item.disabled ?? false"
+      [type]="item.type ?? 'button'"
+      [ariaLabel]="item.ariaLabel ?? ''"
+      [variant]="variant"
+      [context]="context"
+      (buttonClick)="handleButtonClick(item)"
+    ></ui-card-button>
+
+    @if (!last && dividerStrategy === 'line') {
+      <div class="ui-card-button-group__divider"></div>
+    }
+  }
+</div>
+
+
+

@@ -3,6 +3,9 @@ import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/co
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { IconComponent, IconName, IconValue } from '../icon';
 
+export type CardButtonVariant = 'primary' | 'secondary' | 'ghost';
+export type CardButtonContext = 'primary' | 'secondary';
+
 @Component({
   selector: 'ui-card-button',
   standalone: true,
@@ -18,6 +21,8 @@ export class CardButtonComponent {
   @Input() trailing: IconValue | TemplateRef<any> | null = null;
   @Input() useTrailingIcon = false;
   @Input() iconContainerClass: string | string[] | Record<string, boolean> = '';
+  @Input() variant: CardButtonVariant = 'primary';
+  @Input() context: CardButtonContext = 'primary';
   @Input() disabled = false;
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() ariaLabel = '';

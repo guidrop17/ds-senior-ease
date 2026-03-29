@@ -28,6 +28,40 @@
   background: var(--ui-color-primary-soft);
 }
 
+.ui-card-button--primary {
+  background: var(--ui-color-surface);
+  border-color: var(--ui-color-border);
+  color: var(--ui-color-text);
+}
+
+.ui-card-button--primary:hover:not(:disabled) {
+  background: var(--ui-color-primary-soft);
+}
+
+.ui-card-button--secondary {
+  background: var(--ui-color-surface);
+  border-color: var(--ui-color-border);
+  color: var(--ui-color-text);
+}
+
+.ui-card-button--secondary:hover:not(:disabled) {
+  background: var(--ui-color-primary-soft);
+}
+
+.ui-card-button--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ui-color-text);
+}
+
+.ui-card-button--ghost:hover:not(:disabled) {
+  background: var(--ui-color-primary-soft);
+}
+
+.ui-card-button--ghost-secondary {
+  color: var(--ui-color-text);
+}
+
 .ui-card-button:focus-visible {
   outline: 0.1875rem solid var(--ui-color-focus-ring);
   outline-offset: 0.125rem;

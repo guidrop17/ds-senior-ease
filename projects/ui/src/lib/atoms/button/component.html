@@ -8,6 +8,7 @@
   [attr.aria-expanded]="ariaExpanded"
   [attr.aria-controls]="ariaControls || null"
   [attr.aria-describedby]="ariaDescribedBy || null"
+  [class.ui-button--primary]="variant === 'primary'"
   [class.ui-button--secondary]="variant === 'secondary'"
   [class.ui-button--ghost]="variant === 'ghost'"
   [class.ui-button--ghost-secondary]="variant === 'ghost' && context === 'secondary'"

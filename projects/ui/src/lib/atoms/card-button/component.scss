@@ -1,0 +1,92 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.ui-card-button {
+  align-items: center;
+  background: var(--ui-color-surface);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-lg);
+  color: var(--ui-color-text);
+  cursor: pointer;
+  display: flex;
+  gap: var(--ui-space-3);
+  justify-content: space-between;
+  min-height: 5rem;
+  padding: var(--ui-space-4);
+  text-align: left;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    opacity 160ms ease;
+  width: 100%;
+}
+
+.ui-card-button:hover:not(:disabled) {
+  background: var(--ui-color-primary-soft);
+}
+
+.ui-card-button:focus-visible {
+  outline: 0.1875rem solid var(--ui-color-focus-ring);
+  outline-offset: 0.125rem;
+}
+
+.ui-card-button__leading {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--ui-space-4);
+  min-width: 0;
+}
+
+.ui-card-button__icon-container {
+  align-items: center;
+  background: var(--ui-color-primary);
+  border-radius: var(--ui-radius-lg);
+  color: var(--ui-color-text-inverse);
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
+}
+
+.ui-card-button__icon-container :is(.ui-icon, .ui-icon fa-icon) {
+  font-size: var(--ui-font-size-500);
+}
+
+.ui-card-button__copy {
+  display: grid;
+  gap: var(--ui-space-1);
+  min-width: 0;
+}
+
+.ui-card-button__title {
+  color: var(--ui-color-text);
+  font-size: var(--ui-font-size-300);
+  font-weight: var(--ui-font-weight-semibold);
+  line-height: var(--ui-line-height-tight);
+}
+
+.ui-card-button__description {
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-font-size-200);
+  line-height: var(--ui-line-height-base);
+}
+
+.ui-card-button__trailing {
+  color: var(--ui-color-primary);
+  display: inline-flex;
+  flex-shrink: 0;
+  transition: transform 160ms ease;
+}
+
+.ui-card-button:hover:not(:disabled) .ui-card-button__trailing {
+  transform: translateX(0.25rem);
+}
+
+.ui-card-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}

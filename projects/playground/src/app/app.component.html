@@ -21,10 +21,15 @@
   <div class="playground-content">
     <section class="showcase-section">
       <div class="section-heading">
-        <ui-badge label="Acessibilidade" variant="success" ariaLabel="Categoria acessibilidade"></ui-badge>
+        <ui-badge
+          label="Acessibilidade"
+          variant="success"
+          ariaLabel="Categoria acessibilidade"
+        ></ui-badge>
         <ui-text element="h2" size="lg" weight="semibold">Configuracoes globais da UI</ui-text>
         <ui-text element="p" tone="muted">
-          Este painel aplica tema, tamanho de fonte e fonte para dislexia via AccessibilityService da biblioteca.
+          Este painel aplica tema, tamanho de fonte e fonte para dislexia via AccessibilityService
+          da biblioteca.
         </ui-text>
       </div>
 
@@ -78,7 +83,9 @@
         <div class="control-group">
           <div class="rate-header">
             <ui-text element="h3" weight="semibold">Velocidade da voz</ui-text>
-            <ui-text element="span" size="sm" tone="muted">{{ currentSpeechRate.toFixed(1) }}x</ui-text>
+            <ui-text element="span" size="sm" tone="muted"
+              >{{ currentSpeechRate.toFixed(1) }}x</ui-text
+            >
           </div>
           <label class="rate-field">
             <span class="ui-visually-hidden">Velocidade de leitura por voz</span>
@@ -109,11 +116,15 @@
 
     <section class="showcase-section">
       <div class="section-heading">
-        <ui-badge label="Template ativo" variant="primary" ariaLabel="Categoria template ativo"></ui-badge>
+        <ui-badge
+          label="Template ativo"
+          variant="primary"
+          ariaLabel="Categoria template ativo"
+        ></ui-badge>
         <ui-text element="h2" size="lg" weight="semibold">Dashboard Layout em uso</ui-text>
         <ui-text element="p" tone="muted">
-          O proprio playground esta sendo renderizado por ui-dashboard-layout, com
-          ui-sidebar e ui-header aplicados como slots do template.
+          O proprio playground esta sendo renderizado por ui-dashboard-layout, com ui-sidebar e
+          ui-header aplicados como slots do template.
         </ui-text>
       </div>
     </section>
@@ -123,7 +134,8 @@
         <ui-badge label="Atoms" variant="primary" ariaLabel="Categoria atoms"></ui-badge>
         <ui-text element="h2" size="lg" weight="semibold">Base visual do sistema</ui-text>
         <ui-text element="p" tone="muted">
-          Aqui ficam os elementos menores e reutilizaveis: button, icon, avatar, badge, text e divider.
+          Aqui ficam os elementos menores e reutilizaveis: button, icon, avatar, badge, text e
+          divider.
         </ui-text>
       </div>
 
@@ -141,6 +153,9 @@
             <ui-button label="Disabled" ariaLabel="Acao indisponivel" [disabled]="true"></ui-button>
           </div>
         </article>
+        <article class="surface">
+          <ui-card-button [trailingIcon]="icons.chevronRight" [leadingIcon]="icons.study" [description]="'Desenvolvimento Front End'"></ui-card-button>
+        </article>
 
         <article class="surface">
           <ui-text element="h3" weight="semibold">Badge</ui-text>
@@ -156,8 +171,18 @@
           <div class="avatar-group">
             <ui-avatar initials="SE" size="sm" ariaLabel="Avatar de Senior Ease"></ui-avatar>
             <ui-avatar initials="MH" size="md" ariaLabel="Avatar de Maria Helena"></ui-avatar>
-            <ui-avatar initials="CR" size="lg" tone="accent" ariaLabel="Avatar de Carlos Rocha"></ui-avatar>
-            <ui-avatar initials="DS" size="md" tone="neutral" ariaLabel="Avatar de Design System"></ui-avatar>
+            <ui-avatar
+              initials="CR"
+              size="lg"
+              tone="accent"
+              ariaLabel="Avatar de Carlos Rocha"
+            ></ui-avatar>
+            <ui-avatar
+              initials="DS"
+              size="md"
+              tone="neutral"
+              ariaLabel="Avatar de Design System"
+            ></ui-avatar>
           </div>
         </article>
 
@@ -178,7 +203,9 @@
           <div class="text-stack">
             <ui-text element="h2" size="xl" weight="semibold">Heading XL</ui-text>
             <ui-text element="p">Texto base para leitura continua dentro do Design System.</ui-text>
-            <ui-text element="span" size="sm" tone="muted">Legenda secundaria com tom muted.</ui-text>
+            <ui-text element="span" size="sm" tone="muted"
+              >Legenda secundaria com tom muted.</ui-text
+            >
           </div>
         </article>
 
@@ -189,7 +216,10 @@
             <ui-divider ariaLabel="Separador horizontal de exemplo"></ui-divider>
             <div class="divider-inline">
               <ui-text element="span" size="sm">Inicio</ui-text>
-              <ui-divider orientation="vertical" ariaLabel="Separador vertical de exemplo"></ui-divider>
+              <ui-divider
+                orientation="vertical"
+                ariaLabel="Separador vertical de exemplo"
+              ></ui-divider>
               <ui-text element="span" size="sm">Fim</ui-text>
             </div>
           </div>
@@ -275,7 +305,8 @@
         <ui-badge label="Organisms" variant="warning" ariaLabel="Categoria organisms"></ui-badge>
         <ui-text element="h2" size="lg" weight="semibold">Blocos de interface prontos</ui-text>
         <ui-text element="p" tone="muted">
-          ui-sidebar, ui-header e ui-hero-card ja aparecem acima. Abaixo ficam os organisms de dados e listas.
+          ui-sidebar, ui-header e ui-hero-card ja aparecem acima. Abaixo ficam os organisms de dados
+          e listas.
         </ui-text>
       </div>
 

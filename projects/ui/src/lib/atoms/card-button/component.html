@@ -1,0 +1,36 @@
+<button
+  class="ui-card-button"
+  [type]="type"
+  [disabled]="disabled"
+  [attr.aria-label]="ariaLabel || null"
+  (click)="emitClick($event)"
+>
+  <span class="ui-card-button__leading">
+    @if (leadingIcon) {
+      <span class="ui-card-button__icon-container" [ngClass]="iconContainerClass">
+        <ui-icon
+          [name]="resolveIconName(leadingIcon)"
+          [icon]="resolveIconDefinition(leadingIcon)"
+          [decorative]="true"
+        ></ui-icon>
+      </span>
+    }
+
+    <span class="ui-card-button__copy">
+      <span class="ui-card-button__title">{{ title }}</span>
+      @if (description) {
+        <span class="ui-card-button__description">{{ description }}</span>
+      }
+    </span>
+  </span>
+
+  @if (trailingIcon) {
+    <span class="ui-card-button__trailing">
+      <ui-icon
+        [name]="resolveIconName(trailingIcon)"
+        [icon]="resolveIconDefinition(trailingIcon)"
+        [decorative]="true"
+      ></ui-icon>
+    </span>
+  }
+</button>

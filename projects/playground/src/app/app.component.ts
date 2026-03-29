@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
+import { faBookOpen, faBriefcase, faCalendarCheck, faCheckCircle, faChevronRight, faClipboard, faClock } from '@fortawesome/free-solid-svg-icons';
 import {
   AccessibilityService,
   AgendaListComponent,
@@ -18,6 +19,7 @@ import {
   StatsGridComponent,
   TextComponent,
   UserInfoComponent,
+  CardButtonComponent,
   type BadgeVariant,
   type FontSize,
   type IconName,
@@ -47,10 +49,12 @@ import {
     StatComponent,
     StatsGridComponent,
     TextComponent,
-    UserInfoComponent,
+    CardButtonComponent,
+    UserInfoComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class App {
   private readonly accessibility = inject(AccessibilityService);
@@ -116,6 +120,16 @@ export class App {
       ariaLabel: 'Medicao de pressao as 16 horas, rotina',
     },
   ];
+
+  protected readonly icons = {
+    calendar: faCalendarCheck,
+    study: faBookOpen,
+    work: faBriefcase,
+    chevronRight: faChevronRight,
+    check: faCheckCircle,
+    clipboard: faClipboard,
+    clock: faClock,
+  };
 
   protected readonly materialItems: ListItemData[] = [
     {

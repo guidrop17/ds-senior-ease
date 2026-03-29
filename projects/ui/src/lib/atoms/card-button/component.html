@@ -6,31 +6,43 @@
   (click)="emitClick($event)"
 >
   <span class="ui-card-button__leading">
-    @if (leadingIcon) {
-      <span class="ui-card-button__icon-container" [ngClass]="iconContainerClass">
-        <ui-icon
-          [name]="resolveIconName(leadingIcon)"
-          [icon]="resolveIconDefinition(leadingIcon)"
-          [decorative]="true"
-        ></ui-icon>
-      </span>
+    @if (leading) {
+      @if (useLeadingIcon && !isTemplate(leading)) {
+        <span class="ui-card-button__icon-container" [ngClass]="iconContainerClass">
+          <ui-icon
+            [name]="resolveIconName(leading)"
+            [icon]="resolveIconDefinition(leading)"
+            [decorative]="true"
+          ></ui-icon>
+        </span>
+      } @else if (!useLeadingIcon && isTemplate(leading)) {
+        <ng-container [ngTemplateOutlet]="$any(leading)"></ng-container>
+      }
     }
 
     <span class="ui-card-button__copy">
       <span class="ui-card-button__title">{{ title }}</span>
-      @if (description) {
+      @if (isTemplate(description)) {
+        <ng-container [ngTemplateOutlet]="$any(description)"></ng-container>
+      } @else if (description) {
         <span class="ui-card-button__description">{{ description }}</span>
       }
     </span>
   </span>
 
-  @if (trailingIcon) {
-    <span class="ui-card-button__trailing">
-      <ui-icon
-        [name]="resolveIconName(trailingIcon)"
-        [icon]="resolveIconDefinition(trailingIcon)"
-        [decorative]="true"
-      ></ui-icon>
-    </span>
+  @if (trailing) {
+    @if (useTrailingIcon && !isTemplate(trailing)) {
+      <span class="ui-card-button__trailing">
+        <ui-icon
+          [name]="resolveIconName(trailing)"
+          [icon]="resolveIconDefinition(trailing)"
+          [decorative]="true"
+        ></ui-icon>
+      </span>
+    } @else if (!useTrailingIcon && isTemplate(trailing)) {
+      <span class="ui-card-button__trailing">
+        <ng-container [ngTemplateOutlet]="$any(trailing)"></ng-container>
+      </span>
+    }
   }
 </button>

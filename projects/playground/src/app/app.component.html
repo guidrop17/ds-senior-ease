@@ -153,9 +153,29 @@
             <ui-button label="Disabled" ariaLabel="Acao indisponivel" [disabled]="true"></ui-button>
           </div>
         </article>
-        <article class="surface">
-          <ui-card-button [trailingIcon]="icons.chevronRight" [leadingIcon]="icons.study" [description]="'Desenvolvimento Front End'"></ui-card-button>
-        </article>
+        <ng-template #customDescription>
+          <div>
+            <h2 class="text-base font-bold text-foreground">'DASHBOARD.MY_NOTEBOOK'</h2>
+            <p class="text-sm text-muted mt-0.5">'DASHBOARD.NOTEBOOK_DESC</p>
+          </div>
+        </ng-template>
+        <ng-template #customTrailing>
+          <ui-badge [variant]="'success'"> 'COMMON.SEE_DETAILS' </ui-badge>
+        </ng-template>
+        <ui-card-button
+          variant="secondary"
+          [trailing]="customTrailing"
+          [leading]="icons.study"
+          [description]="customDescription"
+        ></ui-card-button>
+
+        <ui-card-button
+          [useLeadingIcon]="true"
+          [useTrailingIcon]="true"
+          [trailing]="icons.chevronRight"
+          [leading]="icons.study"
+          [description]="'Desenvolvimento Front End'"
+        ></ui-card-button>
 
         <article class="surface">
           <ui-text element="h3" weight="semibold">Badge</ui-text>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output, TemplateRef, ViewEncapsulation } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { IconComponent, IconName, IconValue } from '../icon';
 
@@ -12,6 +12,7 @@ export type CardButtonContext = 'primary' | 'secondary';
   imports: [CommonModule, IconComponent],
   templateUrl: './component.html',
   styleUrls: ['./component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CardButtonComponent {
   @Input() title = '';

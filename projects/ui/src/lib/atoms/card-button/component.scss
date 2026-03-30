@@ -32,6 +32,23 @@
   border-color: var(--ui-color-primary-strong);
 }
 
+.ui-card-button--primary .ui-card-button__icon-container {
+  background: var(--ui-color-primary-soft);
+  color: var(--ui-color-primary);
+}
+
+.ui-card-button--primary .ui-card-button__title {
+  color: var(--ui-color-text-inverse);
+}
+
+.ui-card-button--primary .ui-card-button__description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ui-card-button--primary .ui-card-button__trailing {
+  color: var(--ui-color-text-inverse);
+}
+
 .ui-card-button--secondary {
   background: var(--ui-color-surface);
   border: var(--ui-border-width) solid var(--ui-color-border);
@@ -40,6 +57,23 @@
 
 .ui-card-button--secondary:hover:not(:disabled) {
   background: var(--ui-color-primary-soft);
+}
+
+.ui-card-button--secondary .ui-card-button__icon-container {
+  background: var(--ui-color-primary);
+  color: var(--ui-color-text-inverse);
+}
+
+.ui-card-button--secondary .ui-card-button__title {
+  color: var(--ui-color-text);
+}
+
+.ui-card-button--secondary .ui-card-button__description {
+  color: var(--ui-color-text-muted);
+}
+
+.ui-card-button--secondary .ui-card-button__trailing {
+  color: var(--ui-color-primary);
 }
 
 .ui-card-button--ghost {
@@ -52,7 +86,28 @@
   background: var(--ui-color-primary-soft);
 }
 
+.ui-card-button--ghost .ui-card-button__icon-container {
+  background: var(--ui-color-primary);
+  color: var(--ui-color-text-inverse);
+}
+
+.ui-card-button--ghost .ui-card-button__title {
+  color: var(--ui-color-text);
+}
+
+.ui-card-button--ghost .ui-card-button__description {
+  color: var(--ui-color-text-muted);
+}
+
+.ui-card-button--ghost .ui-card-button__trailing {
+  color: var(--ui-color-primary);
+}
+
 .ui-card-button--ghost-secondary {
+  color: var(--ui-color-text);
+}
+
+.ui-card-button--ghost-secondary .ui-card-button__trailing {
   color: var(--ui-color-text);
 }
 
@@ -70,9 +125,7 @@
 
 .ui-card-button__icon-container {
   align-items: center;
-  background: var(--ui-color-primary);
   border-radius: var(--ui-radius-lg);
-  color: var(--ui-color-text-inverse);
   display: inline-flex;
   flex-shrink: 0;
   height: 3rem;
@@ -91,20 +144,17 @@
 }
 
 .ui-card-button__title {
-  color: var(--ui-color-text);
   font-size: var(--ui-font-size-300);
   font-weight: var(--ui-font-weight-semibold);
   line-height: var(--ui-line-height-tight);
 }
 
 .ui-card-button__description {
-  color: var(--ui-color-text-muted);
   font-size: var(--ui-font-size-200);
   line-height: var(--ui-line-height-base);
 }
 
 .ui-card-button__trailing {
-  color: var(--ui-color-primary);
   display: inline-flex;
   flex-shrink: 0;
   transition: transform 160ms ease;
